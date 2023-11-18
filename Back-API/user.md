@@ -123,7 +123,7 @@ o corpo do request deve seguir o padrão:
     "username": "",
     "first_name": "",
     "last_name": "",
-    "email": "
+    "email": "",
     "is_staff": ,
     "is_active": ,
     "date_joined": "",
