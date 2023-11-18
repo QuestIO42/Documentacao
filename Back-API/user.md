@@ -165,9 +165,9 @@ O request com parâmetros na URL remente a busca de usuários no banco de dados.
 
 Para realizar a busca via ID o request deve seguir o padrão:
 ```
-/api/user/1
+/api/user/6
 ```
-E o retorno esperado deve ser um json com o usuário de ID 1.
+E o retorno esperado deve ser um json com o usuário de ID 6.
 
 ```json
 {
