@@ -299,13 +299,11 @@ Para aplicar as migrações, é usado o comando
 
     php artisan migrate
 
-<!--
-
 
 Criei um projeto Laravel para testar e segui os seguintes passos: 
 
 Baixei php e [composer](https://getcomposer.org/download/). Em seguida, segui [este tutorial](https://supabase.com/blog/laravel-postgres).
-> Para que a instalação de Laravel Breeze dê certo, foi preciso ir no arquivo 'php.ini' e descomentar algumas linhas que continham extensões. As que me lembro são: curl, fileinfo, mbstring.
+> Para que a instalação de Laravel Breeze dê certo, foi preciso ir no arquivo `php.ini` e descomentar algumas linhas que continham extensões. As que me lembro são: curl, fileinfo, mbstring.
 
 No arquivo .env, as configurações devem ser as seguintes:
 
@@ -320,6 +318,8 @@ No arquivo .env, as configurações devem ser as seguintes:
 E, em seguida, apliquei o comando 'migrate' no terminal:
 
     php artisan migrate
+
+<!--
 
 O resultado obtido foi esse:
 
