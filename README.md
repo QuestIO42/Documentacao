@@ -44,7 +44,7 @@ VERSION="22.04.4 LTS (Jammy Jellyfish)"
 
 ## DevOps
 
-* [Docker](DevOps/Docker.md)
+* [Docker](https://github.com/QuestIO42/DevOps)
 
 ## Backends
 
