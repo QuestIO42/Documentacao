@@ -1,6 +1,8 @@
 # Documentações do projeto `QuestI0`
 
-Para cada documento neste repositório deve haver um link apontando para ele nesta página. 
+🚨 Para cada documento neste repositório **deve** haver um link apontando para ele nesta página. O mesmo para novos respositórios (incluir um README.md e linkar aqui). Isso facilita encontrar toda a documentação a partir de um mesmo lugar. 
+
+## Documentos principais (⚠️fazer PR junto com a documentação e checar se existe na revisão⚠️)
 
 - [Documento de requisitos](https://docs.google.com/document/d/1mrN9p3zhKcqRMqToB9Mj0hIYp-NVSA3TKEJNZaxD_MU/edit)
 - [Diagrama de classes](https://lucid.app/lucidchart/f5e6c5eb-463a-4fad-a00e-e6fe9bb9619d/edit?invitationId=inv_e14c10db-b853-4ef4-ab46-31e7446cf394&page=HWEp-vi-RSFO#)
@@ -56,7 +58,11 @@ VERSION="22.04.4 LTS (Jammy Jellyfish)"
 
 ### Java/Spring
 
+* [Versão ?](https://github.com/QuestIO42/App-backend-Spring)
+
 ### Node
+
+* [Versão ?](https://github.com/QuestIO42/App-backend-Node)
 
 ## Frontend 
 
