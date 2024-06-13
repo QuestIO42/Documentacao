@@ -60,9 +60,9 @@ VERSION="22.04.4 LTS (Jammy Jellyfish)"
 
 * [Versão 3.3.0](https://github.com/QuestIO42/App-backend-Spring)
 
-### Node
+### Node/Fastify
 
-* [Versão ?](https://github.com/QuestIO42/App-backend-Node)
+* [Versão 4.27.0](https://github.com/QuestIO42/App-backend-Node)
 
 ## Frontend 
 
