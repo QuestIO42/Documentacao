@@ -62,7 +62,7 @@ VERSION="22.04.4 LTS (Jammy Jellyfish)"
 
 ### Node/Fastify
 
-* [Versão 4.27.0](https://github.com/QuestIO42/App-backend-Node)
+* [Versão 4.27.0](https://github.com/QuestIO42/App-backend-Node.js)
 
 ## Frontend 
 
