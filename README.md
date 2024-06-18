@@ -55,6 +55,7 @@ VERSION="22.04.4 LTS (Jammy Jellyfish)"
 ### Python/Django
 
 * [Versão 5.0](https://github.com/QuestIO42/App-backend-django)
+* http://localhost:9000 -> http://django.vlab.dc.ufscar.br/
 
 ### Java/Spring
 
