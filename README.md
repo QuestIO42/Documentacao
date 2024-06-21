@@ -60,14 +60,22 @@ VERSION="22.04.4 LTS (Jammy Jellyfish)"
 ### Java/Spring
 
 * [Versão 3.3.0](https://github.com/QuestIO42/App-backend-Spring)
+* http://localhost:9002 -> http://spring.vlab.dc.ufscar.br/
 
 ### Node/Fastify
 
 * [Versão 4.27.0](https://github.com/QuestIO42/App-backend-Node.js)
+* http://localhost:9001 -> http://fastify.vlab.dc.ufscar.br/
+
+### Jupyter/Notebook
+
+* [JupyterHub:latest](https://github.com/QuestIO42/DevOps/tree/main/jupyter/)
+* http://localhost:8000 -> http://jupyter.vlab.dc.ufscar.br/
 
 ## Frontend 
 
 * [ReactJS](https://github.com/QuestIO42/App-frontend)
+* http://localhost:3000 -> http://react.vlab.dc.ufscar.br/
 
 ## APIs
 
