@@ -76,6 +76,7 @@ VERSION="22.04.4 LTS (Jammy Jellyfish)"
 
 * [ReactJS](https://github.com/QuestIO42/App-frontend)
 * http://localhost:3000 -> http://react.vlab.dc.ufscar.br/
+* [Componentes](https://github.com/QuestIO42/Documentacao/blob/main/Front/Componentes.md)
 
 ## APIs
 
