@@ -2,6 +2,9 @@
 
 ##  Endpoints
 
+- **Swagger:**  
+/docs
+
 - **User:**  
 [/user](./user.md)  
 /user/{id}  
