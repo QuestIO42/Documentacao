@@ -7,7 +7,7 @@
 - [Documento de requisitos](https://docs.google.com/document/d/1mrN9p3zhKcqRMqToB9Mj0hIYp-NVSA3TKEJNZaxD_MU/edit)
 - [Diagrama de classes](https://lucid.app/lucidchart/f5e6c5eb-463a-4fad-a00e-e6fe9bb9619d/edit?invitationId=inv_e14c10db-b853-4ef4-ab46-31e7446cf394&page=HWEp-vi-RSFO#)
 - [Schema SQL](SQL/Schema.md)
-- [Endpoints](Endpoints.md)
+- [Endpoints](Back-API/README.md)
 
 ## Hosts
 
