@@ -8,6 +8,7 @@
 - [Diagrama de classes](https://lucid.app/lucidchart/f5e6c5eb-463a-4fad-a00e-e6fe9bb9619d/edit?invitationId=inv_e14c10db-b853-4ef4-ab46-31e7446cf394&page=HWEp-vi-RSFO#)
 - [Schema SQL](SQL/Schema.md)
 - [Endpoints](Back-API/README.md)
+- [Telas](https://www.figma.com/design/eGVW2hBg9H8dQxIfM2iYYx/Portal-LD?node-id=0-1&t=XuDshWnr7wFOcb1I-0)
 
 ## Hosts
 
