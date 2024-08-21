@@ -25,16 +25,6 @@ Linux vlab.dc.ufscar.br 5.15.0-106-generic #116-Ubuntu SMP Wed Apr 17 09:17:56 U
 menotti@vlab:~$ cat /etc/os-release 
 VERSION="22.04.4 LTS (Jammy Jellyfish)"
 ```
-
-### Servidor secundário (acessível internamente)
-
-```
-ssh -p 2021 user@200.18.99.212 
-
-menotti@menotti:~$ uname -a
-Linux menotti.dc.ufscar.br 6.5.0-28-generic #29~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Apr  4 14:39:20 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
-
-menotti@menotti:~$ cat /etc/os-release 
 VERSION="22.04.4 LTS (Jammy Jellyfish)"
 ```
 
@@ -56,27 +46,27 @@ VERSION="22.04.4 LTS (Jammy Jellyfish)"
 ### Python/Django
 
 * [Versão 5.0](https://github.com/QuestIO42/App-backend-django)
-* http://localhost:9000 -> http://django.vlab.dc.ufscar.br/
+* http://localhost:9000 -> https://django.vlab.dc.ufscar.br/
 
 ### Java/Spring
 
 * [Versão 3.3.0](https://github.com/QuestIO42/App-backend-Spring)
-* http://localhost:9002 -> http://spring.vlab.dc.ufscar.br/
+* http://localhost:9002 -> https://spring.vlab.dc.ufscar.br/
 
 ### Node/Fastify
 
 * [Versão 4.27.0](https://github.com/QuestIO42/App-backend-Node.js)
-* http://localhost:9001 -> http://fastify.vlab.dc.ufscar.br/
+* http://localhost:9001 -> https://fastify.vlab.dc.ufscar.br/
 
 ### Jupyter/Notebook
 
 * [JupyterHub:latest](https://github.com/QuestIO42/DevOps/tree/main/jupyter/)
-* http://localhost:8000 -> http://jupyter.vlab.dc.ufscar.br/
+* http://localhost:8000 -> https://jupyter.vlab.dc.ufscar.br/
 
 ## Frontend 
 
 * [ReactJS](https://github.com/QuestIO42/App-frontend)
-* http://localhost:3000 -> http://react.vlab.dc.ufscar.br/
+* http://localhost:3000 -> https://react.vlab.dc.ufscar.br/
 
 ## APIs
 
