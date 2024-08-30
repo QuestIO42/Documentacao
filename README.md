@@ -25,8 +25,6 @@ Linux vlab.dc.ufscar.br 5.15.0-106-generic #116-Ubuntu SMP Wed Apr 17 09:17:56 U
 menotti@vlab:~$ cat /etc/os-release 
 VERSION="22.04.4 LTS (Jammy Jellyfish)"
 ```
-VERSION="22.04.4 LTS (Jammy Jellyfish)"
-```
 
 ## Web page 
 
@@ -66,7 +64,7 @@ VERSION="22.04.4 LTS (Jammy Jellyfish)"
 ## Frontend 
 
 * [ReactJS](https://github.com/QuestIO42/App-frontend)
-* http://localhost:3000 -> https://react.vlab.dc.ufscar.br/
+* http://localhost:3000 -> https://react.vlab.dc.ufscar.br/ (dev) -> https://questio.vlab.dc.ufscar.br/ (prod)
 
 ## APIs
 
