@@ -23,3 +23,11 @@ git checkout <nome da sua branch>
 git merge main <nome da sua branch>
 ```
 Voalá! Sua branch está atualizada com as alterações da main, agora você pode continuar trabalhando nela.
+
+## Passo 4: Deu ruim 
+Se você tem alterações locais e até commits pode descartar tudo com os commandos a seguir:
+
+```bash
+git fetch origin main
+git reset --hard origin/main
+```
