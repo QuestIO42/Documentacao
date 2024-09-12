@@ -26,6 +26,18 @@ menotti@vlab:~$ cat /etc/os-release
 VERSION="22.04.4 LTS (Jammy Jellyfish)"
 ```
 
+## Práticas de desenvolvimento
+
+### [Conventional Commits](https://www.conventionalcommits.org/pt-br/v1.0.0-beta.4/)
+
+### Deploy
+
+As branchs `main/master` de cada repositório rodam no diretório `/srv/DevOps` do servidor.
+
+Caso queira testar outra branch no servidor antes de fazer `merge`, basta clonar o repositório em sua pasta local e subir o container normalmente. Ele vai substituir o container padrão, pois possui o mesmo nome. Depois, basta voltar no camino `/srv/DevOps` e subir o container padrão. 
+
+> Consulte mais informações em [DevOps](https://github.com/QuestIO42/DevOps)
+
 ## Web page 
 
 * [https://questio42.github.io](https://github.com/QuestIO42/QuestIO42.github.io)
