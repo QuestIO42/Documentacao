@@ -25,21 +25,22 @@
 /course/update/{id}  
 /course/delete/{id}  
 
-- **SchoolRoom:**  
-/schoolroom  
-/schoolroom/{id}  
-/schoolroom/create  
-/schoolroom/update/{id}  
-/schoolroom/delete/{id}  
-
 - **Post:**  
 /post  
 /post/{id}  
 /post/user/{idUser}  
-/post/schoolroom/{idSchoolroom}  
+/post/course/{idCourse}  
+/post/question/{idCourse}  
 /post/create  
 /post/update/{id}  
 /post/delete/{id}  
+
+- **Question:**  
+/question  
+/question/{id}  
+/question/create  
+/question/update/{id}
+/question/delete/{id}
 
 - **Comment:**  
 /comment  
