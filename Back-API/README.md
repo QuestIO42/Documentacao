@@ -26,12 +26,12 @@
 /course/delete/{id}  
 
 - **Post:**  
-/post
-/post/{id}
-/post/user/{idUser}
-/post/course/{idCourse}
-/post/question/{idQuestion}
-/post/create
+/post  
+/post/{id}  
+/post/user/{idUser}  
+/post/course/{idCourse}  
+/post/question/{idQuestion}  
+/post/create  
 /post/update/{id}  
 /post/delete/{id}  
 
@@ -39,7 +39,7 @@
 /question  
 /question/{id}  
 /question/create  
-/question/update/{id}
+/question/update/{id}  
 /question/delete/{id}
 
 - **Comment:**  
