@@ -51,32 +51,30 @@ Caso queira testar outra branch no servidor antes de fazer `merge`, basta clonar
 
 * [Docker](https://github.com/QuestIO42/DevOps)
 
+## Frontend 
+
+* [ReactJS](https://github.com/QuestIO42/App-frontend)
+* https://questio.vlab.dc.ufscar.br/ [[production]](https://github.com/QuestIO42/App-frontend/blob/main/.env)
+
 ## Backends
 
 ### Python/Django
 
 * [Versão 5.0](https://github.com/QuestIO42/App-backend-django)
 * http://localhost:9000 -> https://django.vlab.dc.ufscar.br/
-
-### Java/Spring
-
-* [Versão 3.3.0](https://github.com/QuestIO42/App-backend-Spring)
-* http://localhost:9002 -> https://spring.vlab.dc.ufscar.br/
+* http://localhost:3000 -> https://front-django.vlab.dc.ufscar.br/
 
 ### Node/Fastify
 
 * [Versão 4.27.0](https://github.com/QuestIO42/App-backend-Node.js)
 * http://localhost:9001 -> https://fastify.vlab.dc.ufscar.br/
+* http://localhost:3001 -> https://front-fastify.vlab.dc.ufscar.br/
 
-### Jupyter/Notebook
+### Java/Spring
 
-* [JupyterHub:latest](https://github.com/QuestIO42/DevOps/tree/main/jupyter/)
-* http://localhost:8000 -> https://jupyter.vlab.dc.ufscar.br/
-
-## Frontend 
-
-* [ReactJS](https://github.com/QuestIO42/App-frontend)
-* http://localhost:3000 -> https://react.vlab.dc.ufscar.br/ (dev) -> https://questio.vlab.dc.ufscar.br/ (prod)
+* [Versão 3.3.0](https://github.com/QuestIO42/App-backend-Spring)
+* http://localhost:9002 -> https://spring.vlab.dc.ufscar.br/
+* http://localhost:3002 -> https://front-spring.vlab.dc.ufscar.br/
 
 ## APIs
 
@@ -85,3 +83,8 @@ Caso queira testar outra branch no servidor antes de fazer `merge`, basta clonar
 ## Lab. Virtual
 
 * [legacy](https://github.com/QuestIO42/vlab)
+
+## Jupyter/Notebook
+
+* [JupyterHub:latest](https://github.com/QuestIO42/DevOps/tree/main/jupyter/)
+* http://localhost:8000 -> https://jupyter.vlab.dc.ufscar.br/
