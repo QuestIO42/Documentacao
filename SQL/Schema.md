@@ -36,62 +36,69 @@ O comando '\d' signica 'describe' e tem a funcionalidade de listar as relações
 Exemplo (corresponde à database criada pelo backend Django):
 
 ```sql
-apidb=# \d
-                         Lista de relaþ§es
- Esquema |               Nome                |   Tipo    |   Dono
----------+-----------------------------------+-----------+----------
- public  | auth_group                        | tabela    | apiadmin
- public  | auth_group_id_seq                 | sequÛncia | apiadmin
- public  | auth_group_permissions            | tabela    | apiadmin
- public  | auth_group_permissions_id_seq     | sequÛncia | apiadmin
- public  | auth_permission                   | tabela    | apiadmin
- public  | auth_permission_id_seq            | sequÛncia | apiadmin
- public  | django_admin_log                  | tabela    | apiadmin
- public  | django_admin_log_id_seq           | sequÛncia | apiadmin
- public  | django_content_type               | tabela    | apiadmin
- public  | django_content_type_id_seq        | sequÛncia | apiadmin
- public  | django_migrations                 | tabela    | apiadmin
- public  | django_migrations_id_seq          | sequÛncia | apiadmin
- public  | django_session                    | tabela    | apiadmin
- public  | user_comment                      | tabela    | apiadmin
- public  | user_comment_id_seq               | sequÛncia | apiadmin
- public  | user_course                       | tabela    | apiadmin
- public  | user_curse_id_seq                 | sequÛncia | apiadmin
- public  | user_post                         | tabela    | apiadmin
- public  | user_post_id_seq                  | sequÛncia | apiadmin
- public  | user_schoolroom                   | tabela    | apiadmin
- public  | user_schoolroom_id_seq            | sequÛncia | apiadmin
- public  | user_tb                           | tabela    | apiadmin
- public  | user_tb_seq                       | sequÛncia | apiadmin
- public  | user_user                         | tabela    | apiadmin
- public  | user_user_groups                  | tabela    | apiadmin
- public  | user_user_groups_id_seq           | sequÛncia | apiadmin
- ```
+apidjango=# \d
+                           List of relations
+ Schema |                  Name                   |   Type   |  Owner   
+--------+-----------------------------------------+----------+----------
+ public | app_answer                              | table    | apiadmin
+ public | app_category                            | table    | apiadmin
+ public | app_course                              | table    | apiadmin
+ public | app_post                                | table    | apiadmin
+ public | app_question                            | table    | apiadmin
+ public | app_quiz                                | table    | apiadmin
+ public | app_quizquestion                        | table    | apiadmin
+ public | app_quizquestion_id_seq                 | sequence | apiadmin
+ public | app_user                                | table    | apiadmin
+ public | app_user_groups                         | table    | apiadmin
+ public | app_user_groups_id_seq                  | sequence | apiadmin
+ public | app_user_user_permissions               | table    | apiadmin
+ public | app_user_user_permissions_id_seq        | sequence | apiadmin
+ public | app_usercourse                          | table    | apiadmin
+ public | app_usercourse_id_seq                   | sequence | apiadmin
+ public | app_userquizquestion                    | table    | apiadmin
+ public | auth_group                              | table    | apiadmin
+ public | auth_group_id_seq                       | sequence | apiadmin
+ public | auth_group_permissions                  | table    | apiadmin
+ public | auth_group_permissions_id_seq           | sequence | apiadmin
+ public | auth_permission                         | table    | apiadmin
+ public | auth_permission_id_seq                  | sequence | apiadmin
+ public | django_admin_log                        | table    | apiadmin
+ public | django_admin_log_id_seq                 | sequence | apiadmin
+ public | django_content_type                     | table    | apiadmin
+ public | django_content_type_id_seq              | sequence | apiadmin
+ public | django_migrations                       | table    | apiadmin
+ public | django_migrations_id_seq                | sequence | apiadmin
+ public | django_session                          | table    | apiadmin
+ public | token_blacklist_blacklistedtoken        | table    | apiadmin
+ public | token_blacklist_blacklistedtoken_id_seq | sequence | apiadmin
+ public | token_blacklist_outstandingtoken        | table    | apiadmin
+ public | token_blacklist_outstandingtoken_id_seq | sequence | apiadmin
+(33 rows)
+```
 
 Adicionando o nome de uma tabela após o comando \d, são retornadas informações como os nomes e os tipos das colunas da tabela especificada.
 
 ```sql
-apidb=# \d user_user
-                                         Tabela "public.user_user"
-      Coluna      |           Tipo           | OrdenaþÒo | Pode ser nulo |              PadrÒo
-------------------+--------------------------+-----------+---------------+----------------------------------
- id               | bigint                   |           | not null      | generated by default as identity
- password         | character varying(128)   |           | not null      |
- last_login       | timestamp with time zone |           |               |
- is_superuser     | boolean                  |           | not null      |
- username         | character varying(150)   |           | not null      |
- first_name       | character varying(150)   |           | not null      |
- last_name        | character varying(150)   |           | not null      |
- email            | character varying(254)   |           | not null      |
- is_staff         | boolean                  |           | not null      |
- is_active        | boolean                  |           | not null      |
- date_joined      | timestamp with time zone |           | not null      |
- full_name        | character varying(255)   |           |               |
- college_register | character varying(10)    |           |               |
- user_role        | smallint                 |           |               |
- account_status   | smallint                 |           |               |
- xp_count         | integer                  |           |               |
-═ndices:
+apidjango=# \d app_user
+                           Table "public.app_user"
+      Column      |           Type           | Collation | Nullable | Default 
+------------------+--------------------------+-----------+----------+---------
+ password         | character varying(128)   |           | not null | 
+ last_login       | timestamp with time zone |           |          | 
+ is_superuser     | boolean                  |           | not null | 
+ username         | character varying(150)   |           | not null | 
+ first_name       | character varying(150)   |           | not null | 
+ last_name        | character varying(150)   |           | not null | 
+ is_staff         | boolean                  |           | not null | 
+ is_active        | boolean                  |           | not null | 
+ date_joined      | timestamp with time zone |           | not null | 
+ id               | uuid                     |           | not null | 
+ full_name        | character varying(255)   |           | not null | 
+ college_register | character varying(10)    |           |          | 
+ role             | smallint                 |           | not null | 
+ account_status   | smallint                 |           |          | 
+ xp_count         | integer                  |           |          | 
+ email            | character varying(254)   |           | not null | 
 ```
 
 Além disso, há outras variações de comandos de descrição que servem para retornar outros tipos de informações. Elas podem ser vistas [aqui](https://www.commandprompt.com/education/postgresql-basic-psql-commands/).
@@ -99,27 +106,32 @@ Além disso, há outras variações de comandos de descrição que servem para r
 O comando \dt, por exemplo, mostra apenas as tabelas do banco de dados (sendo uma versão mais enxuta do comando \d):
 
 ```sql
-apidb=# \dt
-                    Lista de relaþ§es
- Esquema |            Nome            |  Tipo  |   Dono
----------+----------------------------+--------+----------
- public  | auth_group                 | tabela | apiadmin
- public  | auth_group_permissions     | tabela | apiadmin
- public  | auth_permission            | tabela | apiadmin
- public  | django_admin_log           | tabela | apiadmin
- public  | django_content_type        | tabela | apiadmin
- public  | django_migrations          | tabela | apiadmin
- public  | django_session             | tabela | apiadmin
- public  | user_comment               | tabela | apiadmin
- public  | user_course                | tabela | apiadmin
- public  | user_post                  | tabela | apiadmin
- public  | user_schoolroom            | tabela | apiadmin
- public  | user_user                  | tabela | apiadmin
- public  | user_user_groups           | tabela | apiadmin
- public  | user_user_user_permissions | tabela | apiadmin
- public  | user_userschoolroom        | tabela | apiadmin
- public  | user_xpincrement           | tabela | apiadmin
-(16 linhas)
+apidjango-# \dt
+                      List of relations
+ Schema |               Name               | Type  |  Owner   
+--------+----------------------------------+-------+----------
+ public | app_answer                       | table | apiadmin
+ public | app_category                     | table | apiadmin
+ public | app_course                       | table | apiadmin
+ public | app_post                         | table | apiadmin
+ public | app_question                     | table | apiadmin
+ public | app_quiz                         | table | apiadmin
+ public | app_quizquestion                 | table | apiadmin
+ public | app_user                         | table | apiadmin
+ public | app_user_groups                  | table | apiadmin
+ public | app_user_user_permissions        | table | apiadmin
+ public | app_usercourse                   | table | apiadmin
+ public | app_userquizquestion             | table | apiadmin
+ public | auth_group                       | table | apiadmin
+ public | auth_group_permissions           | table | apiadmin
+ public | auth_permission                  | table | apiadmin
+ public | django_admin_log                 | table | apiadmin
+ public | django_content_type              | table | apiadmin
+ public | django_migrations                | table | apiadmin
+ public | django_session                   | table | apiadmin
+ public | token_blacklist_blacklistedtoken | table | apiadmin
+ public | token_blacklist_outstandingtoken | table | apiadmin
+(21 rows)
 ```
 
 # Comparando as visualizações para cada backend
@@ -130,19 +142,19 @@ apidb=# \dt
 
 **Explicação de como tabelas são criadas com Django**
 
-As tabelas são criadas em um arquivo chamado 'models.py'. Cada modelo é uma classe que representa uma tabela no banco de dados. 
+As tabelas são criadas em um arquivo chamado ['models.py'](https://github.com/QuestIO42/App-backend-django/blob/main/app/models.py). Cada modelo é uma classe que representa uma tabela no banco de dados. 
 
 ```python
 class User(AbstractUser):
-    full_name = models.CharField(max_length=255, null=True)
-    college_register = models.CharField(max_length=10, null=True)
-    user_role = models.SmallIntegerField(default=0, null=True)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    full_name = models.CharField(max_length=255)
+    college_register = models.CharField(max_length=10, null=True, blank=True)
+    role = models.SmallIntegerField(default=0, choices=USER_ROLE)
     account_status = models.SmallIntegerField(default=0, null=True)
     xp_count = models.IntegerField(null=True)
-
+    email = models.EmailField(("email address"), blank=False)
     def __str__(self):
         return self.username
-
 ```
 
 Essa é a classe da tabela User do banco de dados e cada variável é equivalente a um atributo da tabela. Os parâmetros dão informações sobre os atributos, como o número máximo de caracteres, o valor default e se o campo pode ser nulo ou não.
