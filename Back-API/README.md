@@ -7,8 +7,8 @@
 
 - **User:**  
 [/user](./user.md)  
-/user/{id}
 /user/create  
+/user/{id}<br/>
 /user/update/{id}  
 /user/delete/{id}  
 
