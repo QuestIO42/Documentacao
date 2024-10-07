@@ -7,7 +7,8 @@
 
 - **User:**  
 [/user](./user.md)  
-/user/{id}  
+/user/{id}
+/user/create  
 /user/update/{id}  
 /user/delete/{id}  
 
@@ -16,7 +17,10 @@
 /auth/register  
 /auth/token/refresh  
 /auth/logout  
-/auth/clear-cookie  
+/auth/clear-cookie
+/auth/forgot-password-request
+/auth/reset-password
+/auth/confirm
 
 - **Course:**  
 /course  
