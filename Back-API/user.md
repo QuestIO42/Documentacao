@@ -191,3 +191,8 @@ E o retorno esperado deve ser um json com o usuário de ID 6.
     "user_permissions": []
 }
 ```
+
+### Importação/exportação de dados
+
+- Importação de usuários de uma turma do AVA2 [[formato](import_users.csv)]
+- Exportacão de notas para uma turma do AVA2 [[formato](export_grades.csv)]
