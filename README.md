@@ -17,13 +17,17 @@
 ### Servidor principal (acessível externamente)
 
 ```
-ssh -p 2021 user@vlab.dc.ufscar.br 
+ssh -p 2002 -i key.pem user@vlab.dc.ufscar.br 
 
 menotti@vlab:~$ uname -a 
-Linux vlab.dc.ufscar.br 5.15.0-106-generic #116-Ubuntu SMP Wed Apr 17 09:17:56 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+Linux vlab.dc.ufscar.br 6.8.0-45-generic #45-Ubuntu SMP PREEMPT_DYNAMIC Fri Aug 30 12:02:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
 
 menotti@vlab:~$ cat /etc/os-release 
-VERSION="22.04.4 LTS (Jammy Jellyfish)"
+PRETTY_NAME="Ubuntu 24.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.1 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
 ```
 
 ## Práticas de desenvolvimento
