@@ -24,7 +24,8 @@
 
 - **Course:**  
 /course  
-/course/{id}  
+/course/{id}
+/course/{id}/users
 /course/create  
 /course/update/{id}  
 /course/delete/{id}  
