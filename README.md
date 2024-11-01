@@ -9,6 +9,7 @@
 - [Schema SQL](SQL/Schema.md)
 - [Endpoints](Back-API/README.md)
 - [Telas](https://www.figma.com/design/eGVW2hBg9H8dQxIfM2iYYx/Portal-LD?node-id=0-1&t=XuDshWnr7wFOcb1I-0)
+- [Status](https://docs.google.com/spreadsheets/d/e/2PACX-1vSE35upRszp3C788aIUYjQLQJYQJKcv-4zwOMDvD4zf5aAz-zuy_TfHG9sSwIWd04w3Un6vIYPSS9yS/pubhtml)
 
 ## Hosts
 
