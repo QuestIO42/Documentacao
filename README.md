@@ -15,6 +15,21 @@
 
 ### [Acesso SSH](DevOps/SSH.md)
 
+### Configurar chaves
+
+Colar o conteudo da chave no arquivo `~/.ssh/<USER>.pem` e acertar a permissão dele com `chmod 600 ~/.ssh/<USER>.pem`. Depois criar ou editar o arquivo `~/.ssh/config` com o seguinte conteúdo:
+
+```
+Host vlab
+  HostName vlab.dc.ufscar.br
+  Port 2002
+  User <USER>
+  IdentityFile ~/.ssh/<USER>.pem
+```
+
+Acessar com `ssh vlab` ou pelo próprio VS Code (extensão *Remote - SSH*). 
+
+
 ### Servidor principal (acessível externamente)
 
 ```
