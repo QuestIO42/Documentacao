@@ -2,55 +2,61 @@
 
 ##  Endpoints
 
-- **Swagger:**  
-/docs
+- **Swagger:**
+  
+      /docs
 
-- **User:**  
-[/user](./user.md)  
-/user/create  
-/user/{id}  
-/user/update/{id}  
-/user/delete/{id}  
+- [**User:**](./user.md)
+  
+      /user  
+      /user/create  
+      /user/{id}  
+      /user/update/{id}  
+      /user/delete/{id}  
 
-- **Auth:**  
-/auth/login  
-/auth/register  
-/auth/token/refresh  
-/auth/logout  
-/auth/clear-cookie  
-/auth/forgot-password-request  
-/auth/reset-password  
-/auth/confirm  
+- **Auth:**
+  
+      /auth/login  
+      /auth/register  
+      /auth/token/refresh  
+      /auth/logout  
+      /auth/clear-cookie  
+      /auth/forgot-password-request  
+      /auth/reset-password  
+      /auth/confirm  
 
 - **Course:**  
-/course  
-/course/{id}  
-/course/{id}/users  
-/course/create  
-/course/update/{id}  
-/course/delete/{id}  
+
+      /course  
+      /course/{id}  
+      /course/{id}/users  
+      /course/create  
+      /course/update/{id}  
+      /course/delete/{id}  
 
 - **Post:**  
-/post  
-/post/{id}  
-/post/user/{idUser}  
-/post/course/{idCourse}  
-/post/question/{idQuestion}  
-/post/create  
-/post/update/{id}  
-/post/delete/{id}  
+
+      /post  
+      /post/{id}  
+      /post/user/{idUser}  
+      /post/course/{idCourse}  
+      /post/question/{idQuestion}  
+      /post/create  
+      /post/update/{id}  
+      /post/delete/{id}  
 
 - **Question:**  
-/question  
-/question/{id}  
-/question/create  
-/question/update/{id}  
-/question/delete/{id}
 
-- **Comment:**  
-/comment  
-/comment/{id}  
-/comment/post/{idPost}  
-/comment/create  
-/comment/update/{id}  
-/comment/delete/{id}  
+      /question  
+      /question/{id}  
+      /question/create  
+      /question/update/{id}  
+      /question/delete/{id}
+
+- **Category:**  
+
+      /category  
+      /category/{id}  
+      /category/create  
+      /category/update/{id}  
+      /category/delete/{id} 
