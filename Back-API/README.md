@@ -1,5 +1,14 @@
 #  Docs API
 
+Todas as rotas protegidas levam no cabecalho da request (campo Authorization) o access token no padráo "Bearer: token"
+
+Lista de rotas nao protegidas:
+
+        [POST] /auth/login  
+        [POST] /auth/register  
+        [POST] /auth/forgot-password-request
+
+
 ##  Endpoints
 
 - **Swagger:**

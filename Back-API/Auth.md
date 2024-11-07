@@ -73,9 +73,7 @@ http status code 201
 ```json
 //além do request, no front apagar os tokens de access e refresh
 //request
-{
-    "access": "JWTasdasciOiJIUzI1NiIsInR5cCI6IkpX"
-}
+{}
 
 //response
 http status 204
