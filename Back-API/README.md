@@ -6,57 +6,58 @@
   
       /docs
 
-- [**User:**](./user.md)
+- [**User:**](./User.md)
   
-      /user  
-      /user/create  
-      /user/{id}  
-      /user/update/{id}  
-      /user/delete/{id}  
+         [GET] /user  
+         [GET] /user/{id}  
+        [POST] /user          // Os usuários são criados com os emails já validados
+         [PUT] /user/{id}  
+      [DELETE] /user/{id}  
 
 - **Auth:**
   
-      /auth/login  
-      /auth/register  
-      /auth/token/refresh  
-      /auth/logout  
-      /auth/clear-cookie  
-      /auth/forgot-password-request  
-      /auth/reset-password  
-      /auth/confirm  
+        [POST] /auth/login  
+        [POST] /auth/register  
+        [POST] /auth/token/refresh  
+        [POST] /auth/logout  
+        [POST] /auth/forgot-password-request
+         [GET] /auth/reset-password  
+         [GET] /auth/confirm  
 
 - **Course:**  
 
-      /course  
-      /course/{id}  
-      /course/{id}/users  
-      /course/create  
-      /course/update/{id}  
-      /course/delete/{id}  
+         [GET] /course  
+         [GET] /course/{id}  
+        [POST] /course  
+         [PUT] /course/{id}  
+      [DELETE] /course/{id}  
+
+        [POST] /course/{id}/users  
 
 - **Post:**  
 
-      /post  
-      /post/{id}  
-      /post/user/{idUser}  
-      /post/course/{idCourse}  
-      /post/question/{idQuestion}  
-      /post/create  
-      /post/update/{id}  
-      /post/delete/{id}  
+         [GET] /post  
+         [GET] /post/{id}  
+        [POST] /post  
+         [PUT] /post/{id}  
+      [DELETE] /post/{id}  
+
+        [POST] /post/user/{idUser}  
+        [POST] /post/course/{idCourse}  
+        [POST] /post/question/{idQuestion}  
 
 - **Question:**  
 
-      /question  
-      /question/{id}  
-      /question/create  
-      /question/update/{id}  
-      /question/delete/{id}
+         [GET] /question    
+         [GET] /question/{id}  
+        [POST] /question  
+         [PUT] /question/{id}  
+      [DELETE] /question/{id}  
 
 - **Category:**  
 
-      /category  
-      /category/{id}  
-      /category/create  
-      /category/update/{id}  
-      /category/delete/{id} 
+         [GET] /category  
+         [GET] /category/{id}  
+        [POST] /category  
+         [PUT] /category/{id}  
+      [DELETE] /category/{id} 
