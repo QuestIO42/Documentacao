@@ -1,13 +1,14 @@
-#  Docs API
+#  Documentação das APIs
 
-Todas as rotas protegidas levam no cabecalho da request (campo Authorization) o access token no padráo "Bearer: token"
+Seguir **estritamente** o padrão a seguir!
 
-Lista de rotas nao protegidas:
+Todas as rotas protegidas levam no cabecalho da requisição (`Authorization`) o access token no padráo `Bearer: token`
 
-        [POST] /auth/login  
-        [POST] /auth/register  
-        [POST] /auth/forgot-password-request
+Lista de **rotas não protegidas**:
 
+      [POST] /auth/login  
+      [POST] /auth/register  
+      [POST] /auth/forgot-password-request
 
 ##  Endpoints
 
@@ -15,25 +16,25 @@ Lista de rotas nao protegidas:
   
       /docs
 
+- [**Auth:**](./Auth.md)
+  
+      [POST] /auth/login  
+      [POST] /auth/logout  
+      [POST] /auth/self-register  
+      [POST] /auth/forgot-password-request
+      [POST] /auth/token/refresh  
+       [GET] /auth/reset-password/{codigo_de_verificacao}  
+       [GET] /auth/confirm-email/{codigo_de_verificacao}  
+
 - [**User:**](./User.md)
   
          [GET] /user  
          [GET] /user/{id}  
-        [POST] /user          // Os usuários são criados com os emails já validados
+        [POST] /user       // para importação de usuários
          [PUT] /user/{id}  
       [DELETE] /user/{id}  
 
-- **Auth:**
-  
-        [POST] /auth/login  
-        [POST] /auth/register  
-        [POST] /auth/token/refresh  
-        [POST] /auth/logout  
-        [POST] /auth/forgot-password-request
-         [GET] /auth/reset-password  
-         [GET] /auth/confirm/{codigo_de_verificacao}  
-
-- **Course:**  
+- [**Course:**](./Course.md)  
 
          [GET] /course  
          [GET] /course/{id}  
@@ -43,7 +44,7 @@ Lista de rotas nao protegidas:
 
         [POST] /course/{id}/users  
 
-- **Post:**  
+- [**Post:**](./Post.md)
 
          [GET] /post  
          [GET] /post/{id}  
@@ -55,7 +56,7 @@ Lista de rotas nao protegidas:
         [POST] /post/course/{idCourse}  
         [POST] /post/question/{idQuestion}  
 
-- **Question:**  
+- [**Question:**](./Question.md)  
 
          [GET] /question    
          [GET] /question/{id}  
@@ -63,7 +64,7 @@ Lista de rotas nao protegidas:
          [PUT] /question/{id}  
       [DELETE] /question/{id}  
 
-- **Category:**  
+- [**Category:**](./Category.md)  
 
          [GET] /category  
          [GET] /category/{id}  

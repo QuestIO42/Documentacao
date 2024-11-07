@@ -1,8 +1,5 @@
 # API Autenticação
 
-Seguir **estritamente** o padrão a seguir:
-
-
     [POST] /auth/login
 
 ```json
@@ -32,9 +29,21 @@ Seguir **estritamente** o padrão a seguir:
     "type": "refresh"
     */
 }
-
-
 ```
+
+    [POST] /auth/logout  
+
+```json
+//além do request, o front deve apagar os tokens de access e refresh
+
+// request
+{}
+
+// response
+http status 204
+{}
+```
+
 
     [POST] /auth/self-register  
 
@@ -50,66 +59,54 @@ Seguir **estritamente** o padrão a seguir:
 
 // response
 http status code 201
-{
-}
+{}
 ```
 
     [POST] /auth/token/refresh  
 
 ```json
-//request
+// request
 {
         "refresh": "JWTeyJhbGciOiJIUzI1NiIsInR5cCI6IkpX"
 
 },
-//response
+// response
 {
         "access": "JWTasdasciOiJIUzI1NiIsInR5cCI6IkpX"
 
 }
 ```
-    [POST] /auth/logout  
 
-```json
-//além do request, no front apagar os tokens de access e refresh
-//request
-{}
-
-//response
-http status 204
-{
-
-}
-```
 
     [POST] /auth/forgot-password-request
 
 ```json
-//request
+// request
 {
    "email" : "email"
 }
 
-//response
-http status 200
+// response
+http status code 200
 {}
 ```
 
-    [GET] /auth/reset-password  
+    [GET] /auth/reset-password/{codigo_de_verificacao}    
 
 ```json
+// response
+http status code 200
 {
     "token" : "@#$@#SFDFDGGHS#$$%%^",
     "newPassword" : "secret123"
-    
 }
 ```
 
 
-     [GET] /auth/confirm/{codigo_de_verificacao}  
+     [GET] /auth/confirm-email/{codigo_de_verificacao}  
 
 ```json
-{
-    
-}
+// response
+http status code 200
+{}
 ```
