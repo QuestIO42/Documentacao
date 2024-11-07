@@ -22,7 +22,7 @@
         [POST] /auth/logout  
         [POST] /auth/forgot-password-request
          [GET] /auth/reset-password  
-         [GET] /auth/confirm  
+         [GET] /auth/confirm/{codigo_de_verificacao}  
 
 - **Course:**  
 

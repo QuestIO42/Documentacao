@@ -45,45 +45,70 @@ Seguir **estritamente** o padrão a seguir:
     "full_name" : "Joao da Silva",
     "username" : "123321",
     "email" : "asd@asd.com",
+    "password" : "secret123"
+}
 
-
-
+// response
+http status code 201
+{
 }
 ```
 
     [POST] /auth/token/refresh  
 
 ```json
+//request
 {
-    
+        "refresh": "JWTeyJhbGciOiJIUzI1NiIsInR5cCI6IkpX"
+
+},
+//response
+{
+        "access": "JWTasdasciOiJIUzI1NiIsInR5cCI6IkpX"
+
 }
 ```
     [POST] /auth/logout  
 
 ```json
+//além do request, no front apagar os tokens de access e refresh
+//request
 {
-    
+    "access": "JWTasdasciOiJIUzI1NiIsInR5cCI6IkpX"
+}
+
+//response
+http status 204
+{
+
 }
 ```
 
     [POST] /auth/forgot-password-request
 
 ```json
+//request
 {
-    
+   "email" : "email"
 }
+
+//response
+http status 200
+{}
 ```
 
-     [GET] /auth/reset-password  
+    [GET] /auth/reset-password  
 
 ```json
 {
+    "token" : "@#$@#SFDFDGGHS#$$%%^",
+    "newPassword" : "secret123"
     
 }
 ```
 
 
-     [GET] /auth/confirm  
+     [GET] /auth/confirm/{codigo_de_verificacao}  
 
 ```json
 {
