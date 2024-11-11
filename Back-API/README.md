@@ -30,11 +30,11 @@ Lista de **rotas não protegidas**:
   
          [GET] /user  
          [GET] /user/{id}  
-        [POST] /user         // para importação de usuários
+        [POST] /user         // para importação de usuários (recebe um arquivo .csv)
          [PUT] /user/{id}  
       [DELETE] /user/{id}  
 
-         [GET] /user/course/{idCourse}  // usuários de um curso
+         [GET] /user/course/{idCourse}  // usuários de um curso  
 
 - [**Course:**](./Course.md)  
 
@@ -44,38 +44,7 @@ Lista de **rotas não protegidas**:
          [PUT] /course/{id}  
       [DELETE] /course/{id}  
 
-         [GET] /course/user/{idUser}  // cursos de um usuário
-
-- [**Post:**](./Post.md)
-
-         [GET] /post  
-         [GET] /post/{id}  
-        [POST] /post  
-         [PUT] /post/{id}  
-      [DELETE] /post/{id}  
-
-         [GET] /post/user/{idUser}  
-         [GET] /post/course/{idCourse}  
-         [GET] /post/question/{idQuestion}  
-
-- [**Question:**](./Question.md)  
-
-         [GET] /question    
-         [GET] /question/{id}  
-        [POST] /question  
-         [PUT] /question/{id}  
-      [DELETE] /question/{id}  
-
-         [GET] /question/quiz/{idQuiz}  
-
-
-- [**Category:**](./Category.md)  
-
-         [GET] /category  
-         [GET] /category/{id}  
-        [POST] /category  
-         [PUT] /category/{id}  
-      [DELETE] /category/{id}
+         [GET] /course/user/{idUser}  // cursos de um usuário  
 
 - [**Quiz:**](./Quiz.md)  
 
@@ -85,7 +54,41 @@ Lista de **rotas não protegidas**:
          [PUT] /quiz/{id}  
       [DELETE] /quiz/{id}
 
-         [GET] /quiz/course/{idCourse}  
+         [GET] /quiz/course/{idCourse}  // questionários de um curso   
+
+- [**Category:**](./Category.md)  
+
+         [GET] /category  
+         [GET] /category/{id}  
+        [POST] /category  
+         [PUT] /category/{id}  
+      [DELETE] /category/{id}
+
+         [GET] /category/category/{idCategory}  // sub-categorias de uma categoria
+  
+- [**Question:**](./Question.md)  
+
+         [GET] /question    
+         [GET] /question/{id}  
+        [POST] /question  
+         [PUT] /question/{id}  
+      [DELETE] /question/{id}  
+
+         [GET] /question/quiz/{idQuiz}  // questões de um questionário  
+         [GET] /question/category/{idCategory}  // questões de uma categoria  
+
+- [**Post:**](./Post.md)
+
+         [GET] /post  
+         [GET] /post/{id}  
+        [POST] /post  
+         [PUT] /post/{id}  
+      [DELETE] /post/{id}  
+
+         [GET] /post/user/{idUser}  // posts de um usuário  
+         [GET] /post/course/{idCourse}  // posts de um curso   
+         [GET] /post/question/{idQuestion}  // posts de uma questão  
+
 
 - [**QuizQuestion:**](./QuizQuestion.md)  
 
