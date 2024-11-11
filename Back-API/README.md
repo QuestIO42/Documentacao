@@ -30,9 +30,11 @@ Lista de **rotas não protegidas**:
   
          [GET] /user  
          [GET] /user/{id}  
-        [POST] /user       // para importação de usuários
+        [POST] /user         // para importação de usuários
          [PUT] /user/{id}  
       [DELETE] /user/{id}  
+
+         [GET] /user/course/{idCourse}  // usuários de um curso
 
 - [**Course:**](./Course.md)  
 
@@ -42,7 +44,7 @@ Lista de **rotas não protegidas**:
          [PUT] /course/{id}  
       [DELETE] /course/{id}  
 
-        [POST] /course/{id}/users  
+         [GET] /course/user/{idUser}  // cursos de um usuário
 
 - [**Post:**](./Post.md)
 
@@ -52,9 +54,9 @@ Lista de **rotas não protegidas**:
          [PUT] /post/{id}  
       [DELETE] /post/{id}  
 
-        [POST] /post/user/{idUser}  
-        [POST] /post/course/{idCourse}  
-        [POST] /post/question/{idQuestion}  
+         [GET] /post/user/{idUser}  
+         [GET] /post/course/{idCourse}  
+         [GET] /post/question/{idQuestion}  
 
 - [**Question:**](./Question.md)  
 
@@ -64,10 +66,30 @@ Lista de **rotas não protegidas**:
          [PUT] /question/{id}  
       [DELETE] /question/{id}  
 
+         [GET] /question/quiz/{idQuiz}  
+
+
 - [**Category:**](./Category.md)  
 
          [GET] /category  
          [GET] /category/{id}  
         [POST] /category  
          [PUT] /category/{id}  
-      [DELETE] /category/{id} 
+      [DELETE] /category/{id}
+
+- [**Quiz:**](./Quiz.md)  
+
+         [GET] /quiz    
+         [GET] /quiz/{id}  
+        [POST] /quiz  
+         [PUT] /quiz/{id}  
+      [DELETE] /quiz/{id}
+
+         [GET] /quiz/course/{idCourse}  
+
+- [**QuizQuestion:**](./QuizQuestion.md)  
+
+         [GET] /quizquestion/{idQuiz}/{idQuestion}  
+        [POST] /quizquestion  
+         [PUT] /quizquestion/{idQuiz}/{idQuestion}  
+      [DELETE] /quizquestion/{idQuiz}/{idQuestion}  
