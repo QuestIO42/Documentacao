@@ -46,13 +46,19 @@ Lista de **rotas não protegidas**:
 
          [GET] /course/user/{idUser}  // cursos de um usuário  
 
+- [**UserCourse:**](./UserCourse.md)  
+
+         [GET] /usercourse/{idUser}/{idCourse}  
+        [POST] /usercourse  
+         [PUT] /usercourse/{idUser}/{idCourse}  
+      [DELETE] /usercourse/{idUser}/{idCourse}  
+
 - [**Quiz:**](./Quiz.md)  
 
-         [GET] /quiz    
          [GET] /quiz/{id}  
         [POST] /quiz  
          [PUT] /quiz/{id}  
-      [DELETE] /quiz/{id}
+      [DELETE] /quiz/{id}  
 
          [GET] /quiz/course/{idCourse}  // questionários de um curso   
 
@@ -68,7 +74,6 @@ Lista de **rotas não protegidas**:
   
 - [**Question:**](./Question.md)  
 
-         [GET] /question    
          [GET] /question/{id}  
         [POST] /question  
          [PUT] /question/{id}  
@@ -79,7 +84,6 @@ Lista de **rotas não protegidas**:
 
 - [**Post:**](./Post.md)
 
-         [GET] /post  
          [GET] /post/{id}  
         [POST] /post  
          [PUT] /post/{id}  
@@ -89,10 +93,29 @@ Lista de **rotas não protegidas**:
          [GET] /post/course/{idCourse}  // posts de um curso   
          [GET] /post/question/{idQuestion}  // posts de uma questão  
 
-
 - [**QuizQuestion:**](./QuizQuestion.md)  
 
          [GET] /quizquestion/{idQuiz}/{idQuestion}  
         [POST] /quizquestion  
          [PUT] /quizquestion/{idQuiz}/{idQuestion}  
-      [DELETE] /quizquestion/{idQuiz}/{idQuestion}  
+      [DELETE] /quizquestion/{idQuiz}/{idQuestion}
+
+- [**Answer:**](./Answer.md)  
+
+         [GET] /answer/{id}  
+        [POST] /answer  
+         [PUT] /answer/{id}  
+      [DELETE] /answer/{id}  
+
+         [GET] /answer/question/{idQuestion}  // respostas de uma questão  
+
+- [**UserQuizQuestionAnswer:**](./UserQuizQuestionAnswer.md)  
+
+         [GET] /userquizquestionanswer/{id}  
+        [POST] /userquizquestionanswer  
+         [PUT] /userquizquestionanswer/{id}  
+      [DELETE] /userquizquestionanswer/{id}  
+
+         [GET] /userquizquestionanswer/quiz/{idQuiz}  // respostas de um usuário em um questionário
+         [GET] /userquizquestionanswer/quizquestion/{idQuiz}/{idQuestion}  // resposta de um usuário em uma questão de um questionário
+
