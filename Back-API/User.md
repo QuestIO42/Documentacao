@@ -1,8 +1,8 @@
-# API Usuáros
+# API Usuários
 
-    /user
+         [GET] /user  
 
-Retorna todos os usuários cadastrados.
+Retorna todos os usuários cadastrados no portal.
 
 ```json
 // request
