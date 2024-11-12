@@ -1,6 +1,8 @@
 #  Documentação das APIs
 
-Seguir **estritamente** o padrão a seguir!
+1. Seguir **estritamente** o padrão a seguir! 
+2. Se for implementar algo que não está descrito aqui, por favor, estabeleça o padrão e descreva aqui como implementou.
+3. Se não entendeu alguma coisa, pergunte!  
 
 Todas as rotas protegidas levam no cabecalho da requisição (`Authorization`) o access token no padráo `Bearer: token`
 
