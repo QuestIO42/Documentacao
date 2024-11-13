@@ -66,12 +66,12 @@ Lista de **rotas não protegidas**:
 
 - [**Category:**](./Category.md)  
 
-         [GET] /category  
          [GET] /category/{id}  
         [POST] /category  
          [PUT] /category/{id}  
       [DELETE] /category/{id}
 
+         [GET] /category/course/{idCourse}  // categorias de um curso
          [GET] /category/category/{idCategory}  // sub-categorias de uma categoria
   
 - [**Question:**](./Question.md)  
