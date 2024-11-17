@@ -1,6 +1,6 @@
 # API Respostas dos usuários
 
-  [POST] /userquizquestionanswer    
+    [POST] /userquizquestionanswer    
 
 Envia e salva a resposta de um usuário a uma questão aberta. Recebe o retorno para exibição assíncrona ao usuário.
 
