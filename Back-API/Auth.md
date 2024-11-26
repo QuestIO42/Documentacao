@@ -80,6 +80,8 @@ http status code 201
 
     [POST] /auth/forgot-password-request
 
+Esta rota não deve fornecer a informação sobre a existência do cadastro do usuário e não deve alterar sua senha no banco, apenas o campo `verificationCode` na tabela do usuário. Deve responder apenas: **Se este e-mail estiver cadastrado no sistema, você receberá uma mensagem com instruções para configurar uma nova senha**.
+
 ```json
 // request
 {
@@ -93,12 +95,13 @@ http status code 200
 
     [GET] /auth/reset-password/{codigo_de_verificacao}    
 
+Esta rota confere se o código de verificação do usuário existe, recebe um token de onde obtem seu ID e redireciona para a página de configurar uma nova senha, que por sua vez apontará para `[PUT] /user/{id}`.
+
 ```json
 // response
 http status code 200
 {
-    "token" : "@#$@#SFDFDGGHS#$$%%^",
-    "newPassword" : "secret123"
+    "token" : "@#$@#SFDFDGGHS#$$%%^"
 }
 ```
 

@@ -11,6 +11,8 @@ Lista de **rotas não protegidas**:
       [POST] /auth/login  
       [POST] /auth/register  
       [POST] /auth/forgot-password-request
+       [GET] /auth/reset-password/{codigo_de_verificacao}  
+       [GET] /auth/confirm-email/{codigo_de_verificacao}  
 
 ##  Endpoints
 
