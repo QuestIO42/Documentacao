@@ -95,7 +95,7 @@ http status code 200
 
     [GET] /auth/reset-password/{codigo_de_verificacao}    
 
-Esta rota confere se o código de verificação do usuário existe, recebe um token de onde obtem seu ID e redireciona para a página de configurar uma nova senha, que por sua vez apontará para `[PUT] /user/{id}`.
+Esta rota confere se o código de verificação do usuário existe e retorna os tokens (mesmo padrão de login). O front obtem seu ID do token e redireciona para a página de configurar uma nova senha (`change-password`), que por sua vez apontará para `[PUT] /user/{id}`.
 
 ```json
 // response
