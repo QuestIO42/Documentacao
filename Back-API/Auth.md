@@ -37,7 +37,9 @@
 //além do request, o front deve apagar os tokens de access e refresh
 
 // request
-{}
+{
+    refresh:string
+}
 
 // response
 http status 204
