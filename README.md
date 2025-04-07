@@ -25,6 +25,7 @@ Host vlab
   Port 2002
   User <USER>
   IdentityFile ~/.ssh/<USER>.pem
+  AddressFamily inet
 ```
 
 Acessar com `ssh vlab` ou pelo próprio VS Code (extensão *Remote - SSH*). 
