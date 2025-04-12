@@ -32,21 +32,25 @@ Lista de **rotas não protegidas**:
 
 - [**User:**](./User.md)
   
-         [GET] /user  
+         [GET] /user        // receber todos os usuarios
          [GET] /user/{id}  
         [POST] /user         // para importação de usuários (recebe um arquivo .csv)
          [PUT] /user/{id}  
-      [DELETE] /user/{id}  
+      [DELETE] /user/{id}
+
+         [GET] /user/ranking/{quantidade}  // Visualizar rank de usuarios do site
 
          [GET] /user/course/{idCourse}  // usuários de um curso  
 
 - [**Course:**](./Course.md)  
 
-         [GET] /course  
-         [GET] /course/{id}  
-        [POST] /course  
+         [GET] /course    // ver todos os cursos
+         [GET] /course/{id}  // ver um curso especifico
+        [POST] /course
          [PUT] /course/{id}  
-      [DELETE] /course/{id}  
+      [DELETE] /course/{id}
+  
+         [GET] /course/ranking/{quantidade}  // visualizar ranking de usuarios no curso
 
          [GET] /course/user/{idUser}  // cursos de um usuário  
 
@@ -122,10 +126,4 @@ Lista de **rotas não protegidas**:
 
          [GET] /userquizquestionanswer/quiz/{idQuiz}  // respostas de um usuário em um questionário
          [GET] /userquizquestionanswer/quizquestion/{idQuiz}/{idQuestion}  // resposta de um usuário em uma questão de um questionário
-
-- [**ranking:**](./Ranking.md)  
-
-         [GET] /ranking
-         [GET] /ranking/{course}
-
 
