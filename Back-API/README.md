@@ -123,3 +123,9 @@ Lista de **rotas não protegidas**:
          [GET] /userquizquestionanswer/quiz/{idQuiz}  // respostas de um usuário em um questionário
          [GET] /userquizquestionanswer/quizquestion/{idQuiz}/{idQuestion}  // resposta de um usuário em uma questão de um questionário
 
+- [**ranking:**](./Ranking.md)  
+
+         [GET] /ranking
+         [GET] /ranking/{course}
+
+
