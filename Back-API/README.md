@@ -32,23 +32,23 @@ Lista de **rotas não protegidas**:
 
 - [**User:**](./User.md)
   
-         [GET] /user        // receber todos os usuarios
-         [GET] /user/{id}  
-        [POST] /user         // para importação de usuários (recebe um arquivo .csv)
-         [PUT] /user/{id}  
-      [DELETE] /user/{id}
+         [GET] /user        // ver todos os usuarios
+         [GET] /user/{id}   // ver informações de um usuario especifico
+        [POST] /user        // para importação de usuários (recebe um arquivo .csv)
+         [PUT] /user/{id}
+      [DELETE] /user/{id}   // remover um usuario
 
-         [GET] /user/ranking/{quantidade}  // Visualizar rank de usuarios do site
+         [GET] /user/ranking/{quantidade}  // ver rank de usuarios do site
 
          [GET] /user/course/{idCourse}  // usuários de um curso  
 
 - [**Course:**](./Course.md)  
 
-         [GET] /course    // ver todos os cursos
+         [GET] /course       // ver todos os cursos
          [GET] /course/{id}  // ver um curso especifico
         [POST] /course
          [PUT] /course/{id}  
-      [DELETE] /course/{id}
+      [DELETE] /course/{id}  // remover um curso
   
          [GET] /course/ranking/{quantidade}  // visualizar ranking de usuarios no curso
 
@@ -63,10 +63,10 @@ Lista de **rotas não protegidas**:
 
 - [**Quiz:**](./Quiz.md)  
 
-         [GET] /quiz/{id}  
+         [GET] /quiz/{id}  // ver um questionario especifico
         [POST] /quiz  
          [PUT] /quiz/{id}  
-      [DELETE] /quiz/{id}  
+      [DELETE] /quiz/{id}  // remover um querionario
 
          [GET] /quiz/course/{idCourse}  // questionários de um curso   
 
@@ -82,20 +82,20 @@ Lista de **rotas não protegidas**:
   
 - [**Question:**](./Question.md)  
 
-         [GET] /question/{id}  
+         [GET] /question/{id}  // ver uma questão especifica
         [POST] /question  
          [PUT] /question/{id}  
-      [DELETE] /question/{id}  
+      [DELETE] /question/{id}  // remover uma questão especifica
 
          [GET] /question/quiz/{idQuiz}  // questões de um questionário  
          [GET] /question/category/{idCategory}  // questões de uma categoria  
 
 - [**Post:**](./Post.md)
 
-         [GET] /post/{id}  
-        [POST] /post  
+         [GET] /post/{id}  // ver uma postagem especifica
+        [POST] /post       // enviar uma postagem
          [PUT] /post/{id}  
-      [DELETE] /post/{id}  
+      [DELETE] /post/{id}  // remover uma postagem especifica
 
          [GET] /post/user/{idUser}  // posts de um usuário  
          [GET] /post/course/{idCourse}  // posts de um curso   
@@ -110,16 +110,16 @@ Lista de **rotas não protegidas**:
 
 - [**Answer:**](./Answer.md)  
 
-         [GET] /answer/{id}  
+         [GET] /answer/{id}  // ver uma resposta especifica
         [POST] /answer  
          [PUT] /answer/{id}  
-      [DELETE] /answer/{id}  
+      [DELETE] /answer/{id}  // remover uma resposta especifica
 
          [GET] /answer/question/{idQuestion}  // respostas de uma questão  
 
 - [**UserQuizQuestionAnswer:**](./UserQuizQuestionAnswer.md)  
 
-         [GET] /userquizquestionanswer/{id}  
+         [GET] /userquizquestionanswer/{id}
         [POST] /userquizquestionanswer  
          [PUT] /userquizquestionanswer/{id}  
       [DELETE] /userquizquestionanswer/{id}  
