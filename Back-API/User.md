@@ -14,20 +14,16 @@ Retorna todos os usuários cadastrados no portal.
         "username": "123456", // RA do aluno
         "full_name": "Fulano de tal",
         "email": "fulano@estudante.ufscar.br",
-        "last_login": "2023-11-17T23:38:00Z",
-        "user_role": "STUDENT", // STUDENT, MENTOR, TEACHER, ADMIN
-        "xp_course": "0",
-        "xp_main": "0",
+        "role": "STUDENT", // STUDENT, MENTOR, TEACHER, ADMIN
+        "xp_count": "0",
     },
     {
         "id": "4a870aca-072c-4fbc-9f5d-20490f8fe19c",
         "username": "567890", // RA do aluno
         "full_name": "Beltrano de tal",
         "email": "beltrano@estudante.ufscar.br",
-        "last_login": "2023-11-17T23:38:00Z",
         "user_role": "MENTOR",
-        "xp_course": "0",
-        "xp_main": "0",
+        "xp_count": "0",
     },
 ]
 ```
@@ -47,18 +43,35 @@ E o retorno esperado deve ser um json com o usuário de ID especificado.
     "username": "567890", // RA do aluno
     "full_name": "Beltrano de tal",
     "email": "beltrano@estudante.ufscar.br",
-    "last_login": "2023-11-17T23:38:00Z",
     "user_role": "MENTOR",
-    "xp_course": "0",
-    "xp_main": "0",
+    "xp_count": "0",
 }
 ```
 
+## Request com parâmetros (PUT|URL) | Alteração de senha
+         [PUT] /user/{id}  
+Deve ser usado para alterar a senha do usuario apos verificar o pedido de alteração de senha em `[GET] /auth/reset-password/{uuid4}` 
+```json
+// request
+{
+    "password": "secret123"
+}
+// response
+{
+    "id": "4a870aca-072c-4fbc-9f5d-20490f8fe19c",
+    "username": "567890", // RA do aluno
+    "full_name": "Beltrano de tal",
+    "email": "beltrano@estudante.ufscar.br",
+    "user_role": "MENTOR",
+    "xp_count": "0",
+    "password": "JWTeyJhbGciOiJIUzI1NiIsInR5cCI6IkpX"
+}
+```
 # Importação/exportação de dados
 
 ## Importação de alunos em um curso
 
-    [POST] /user       // para importação de usuário
+         [POST] /user       // para importação de usuário
 
 ```json
 // request
