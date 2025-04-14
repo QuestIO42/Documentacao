@@ -31,6 +31,9 @@ Host vlab
 Acessar com `ssh vlab` ou pelo próprio VS Code (extensão *Remote - SSH*). 
 
 
+Nota: no windows, ao utilizar o comando ssh pela primeira vez é criada a pasta `C:\Users\<seu-user\.ssh` que pode ser utilizada da mesma forma que o `~/.ssh` no linux.
+
+
 ### Servidor principal (acessível externamente)
 
 ```
@@ -76,6 +79,7 @@ Caso queira testar outra branch no servidor antes de fazer `merge`, basta clonar
 
 * [ReactJS](https://github.com/QuestIO42/App-frontend)
 * https://questio.vlab.dc.ufscar.br/ [[production]](https://github.com/QuestIO42/App-frontend/blob/main/.env)
+* https://dev.vlab.dc.ufscar.br/ [[development]](https://github.com/QuestIO42/App-frontend/blob/main/.env)
 
 ## Backends
 
@@ -83,8 +87,9 @@ Caso queira testar outra branch no servidor antes de fazer `merge`, basta clonar
 
 * [Versão 5.0](https://github.com/QuestIO42/App-backend-django)
 * http://localhost:9000 -> https://django.vlab.dc.ufscar.br/
-* http://localhost:3000 -> https://front-django.vlab.dc.ufscar.br/
+* http://localhost:3000 -> https://dev.vlab.dc.ufscar.br/
 
+<!-- 
 ### Node/Fastify
 
 * [Versão 4.27.0](https://github.com/QuestIO42/App-backend-Node.js)
@@ -96,7 +101,7 @@ Caso queira testar outra branch no servidor antes de fazer `merge`, basta clonar
 * [Versão 3.3.0](https://github.com/QuestIO42/App-backend-Spring)
 * http://localhost:9002 -> https://spring.vlab.dc.ufscar.br/
 * http://localhost:3002 -> https://front-spring.vlab.dc.ufscar.br/
-
+-->
 ## APIs
 
 * [Judge](https://github.com/QuestIO42/Judge-API)
@@ -104,8 +109,9 @@ Caso queira testar outra branch no servidor antes de fazer `merge`, basta clonar
 ## Lab. Virtual
 
 * [legacy](https://github.com/QuestIO42/vlab)
-
+<!-- 
 ## Jupyter/Notebook
 
 * [JupyterHub:latest](https://github.com/QuestIO42/DevOps/tree/main/jupyter/)
 * http://localhost:8000 -> https://jupyter.vlab.dc.ufscar.br/
+-->
