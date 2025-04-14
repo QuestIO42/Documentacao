@@ -19,6 +19,8 @@
 
 Colar o conteudo da chave no arquivo `~/.ssh/<USER>.pem` e acertar a permissão dele com `chmod 600 ~/.ssh/<USER>.pem`. Depois criar ou editar o arquivo `~/.ssh/config` com o seguinte conteúdo:
 
+No windows, ao utilizar o comando ssh pela primeira vez é criada a pasta `C:\Users\<seu-user\.ssh` que pode ser utilizada da mesma forma que a o `~/.ssh` no linux.
+
 ```
 Host vlab
   HostName vlab.dc.ufscar.br
