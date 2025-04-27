@@ -67,6 +67,23 @@ Deve ser usado para alterar a senha do usuario apos verificar o pedido de altera
     "password": "JWTeyJhbGciOiJIUzI1NiIsInR5cCI6IkpX"
 }
 ```
+## Request com parâmetros (PUT|URL) | Alteração de senha
+         [PATCH] /user/{id}  
+Deve ser usado para alterar as informações de um usuário
+```json
+// request
+{
+    "username": "567890",                         //opcional
+    "full_name": "Beltrano de tal",               //opcional
+    "email": "beltrano@estudante.ufscar.br",      //opcional
+}
+// response
+{
+    "username": "567890", // RA do aluno
+    "full_name": "Beltrano de tal",
+    "email": "beltrano@estudante.ufscar.br",
+}
+```
 # Importação/exportação de dados
 
 ## Importação de alunos em um curso
