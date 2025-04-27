@@ -33,9 +33,10 @@ Lista de **rotas não protegidas**:
 - [**User:**](./User.md)
   
          [GET] /user        // ver todos os usuarios
-         [GET] /user/{id}   // ver informações de um usuario especifico
         [POST] /user        // para importação de usuários (recebe um arquivo .csv)
-         [PUT] /user/{id}   // atualizar informações de um usuario
+         [GET] /user/{id}   // ver informações de um usuario especifico
+         [PUT] /user/{id}   // atualizar senha de um usuário
+       [PATCH] /user/{id}   // atualizar informações de um usuário
       [DELETE] /user/{id}   // remover um usuario
 
          [GET] /user/ranking/{quantidade}  // ver rank de usuarios do site
