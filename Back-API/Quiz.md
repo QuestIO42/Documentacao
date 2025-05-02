@@ -34,7 +34,7 @@ Retorna o questionario com esse id e suas questões.
     "id_course": "613d8730-3141-420f-b963-fea703e01c5e",
     "questions": [
         {
-            "id_question": "a5ca9b51-98ee-4d41-a3b7-483a446ed733",
+            "id": "a5ca9b51-98ee-4d41-a3b7-483a446ed733",
             "weight": 67,
             "tries": 2,
             "name": "questao 1",
