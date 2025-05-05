@@ -50,40 +50,25 @@ E o retorno esperado deve ser um json com o usuário de ID especificado.
 
 ## Request com parâmetros (PUT|URL) | Alteração de senha
          [PUT] /user/{id}  
-Deve ser usado para alterar a senha do usuario apos verificar o pedido de alteração de senha em `[GET] /auth/reset-password/{uuid4}` 
+Deve ser usado para alterar as informações de um usuário de forma parcial 
 ```json
 // request
 {
-    "password": "secret123"
+    "username": "567890",                     //opcional
+    "full_name": "Beltrano de tal",           //opcional
+    "email": "beltrano@estudante.ufscar.br",  //opcional
 }
 // response
 {
     "id": "4a870aca-072c-4fbc-9f5d-20490f8fe19c",
-    "username": "567890", // RA do aluno
+    "username": "567890",
     "full_name": "Beltrano de tal",
     "email": "beltrano@estudante.ufscar.br",
     "user_role": "MENTOR",
     "xp_count": "0",
-    "password": "JWTeyJhbGciOiJIUzI1NiIsInR5cCI6IkpX"
 }
 ```
-## Request com parâmetros (PUT|URL) | Alteração de senha
-         [PATCH] /user/{id}  
-Deve ser usado para alterar as informações de um usuário
-```json
-// request
-{
-    "username": "567890",                         //opcional
-    "full_name": "Beltrano de tal",               //opcional
-    "email": "beltrano@estudante.ufscar.br",      //opcional
-}
-// response
-{
-    "username": "567890", // RA do aluno
-    "full_name": "Beltrano de tal",
-    "email": "beltrano@estudante.ufscar.br",
-}
-```
+
 # Importação/exportação de dados
 
 ## Importação de alunos em um curso
@@ -118,3 +103,24 @@ Deve ser usado para alterar as informações de um usuário
 
 - Importação de usuários de uma turma do AVA2 [[formato](import_users.csv)]
 - Exportacão de notas para uma turma do AVA2 [[formato](export_grades.csv)]
+
+# Visualização de Alunos de um curso
+         [GET] /user/course/{idCourse}  
+
+É usado pra visualizar usuários de um curso, podendo filtrar por cargo: 
+```json
+// request
+{
+    "course_role": "0", //opcional //
+
+}
+// response
+{
+    "id_user": "d7350af6-29ab-419a-98b2-55091a3eea3e",
+    "username": "567890", 
+    "full_name": "Beltrano de tal",
+    "course_xp": 0,
+    "course_role": 0,
+    "user_role": 0
+}
+```
