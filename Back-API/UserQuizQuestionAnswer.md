@@ -104,11 +104,53 @@ Envia e salva a resposta de um usuário a uma questão de Verilog. Recebe o reto
     "feedback": {
         "1ed8b3c6-d683-4081-b369-512efe2eb573": {
             "message": "Erro do teste sum: esperado x obtido y! (50)",
-            "dump": "$date\n\tSun May 18 20:23:55 2025\n$end\n$version\n\tIcarus Verilog\n$end\n$timescale\n\t1s\n$end\n$scope module tb_top0 $end\n$var wire 1 ! zero $end\n$var reg 1 \" flip $end\n$scope module dut $end\n$var wire 1 \" flip $end\n$var wire 1 ! zero $end\n$var wire 1 # one $end\n$upscope $end\n$upscope $end\n$enddefinitions $end\n#0\n$dumpvars\n1#\n0\"\n0!\n$end\n#11\n1!\n0#\n1\"\n#12\n"
+            "dump": {
+                "config": {
+                    "hscale": 1
+                },
+                "signal": [
+                    {
+                        "data": [],
+                        "name": "tb_top0.zero",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.flip",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.dut.one",
+                        "wave": "10"
+                    }
+                ]
+            }
         },
         "1ed8b3c6-d683-4081-b369-512efe2eb575": {
             "message": "Erro do teste cout: esperado x obtido y! (0)",
-            "dump": "$date\n\tSun May 18 20:23:55 2025\n$end\n$version\n\tIcarus Verilog\n$end\n$timescale\n\t1s\n$end\n$scope module tb_top0 $end\n$var wire 1 ! zero $end\n$var reg 1 \" flip $end\n$scope module dut $end\n$var wire 1 \" flip $end\n$var wire 1 ! zero $end\n$var wire 1 # one $end\n$upscope $end\n$upscope $end\n$enddefinitions $end\n#0\n$dumpvars\n1#\n0\"\n0!\n$end\n#11\n1!\n0#\n1\"\n#12\n"
+            "dump": "{
+                "config": {
+                    "hscale": 1
+                },
+                "signal": [
+                    {
+                        "data": [],
+                        "name": "tb_top0.zero",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.flip",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.dut.one",
+                        "wave": "10"
+                    }
+                ]
+            }
         }
     }},
 ```
@@ -132,11 +174,53 @@ Envia e salva a resposta de um usuário a uma questão de Verilog. Recebe o reto
     "feedback": {
         "1ed8b3c6-d683-4081-b369-512efe2eb573": {
             "message": "Sucesso do teste sum! (50)",
-            "dump": "$date\n\tSun May 18 20:23:55 2025\n$end\n$version\n\tIcarus Verilog\n$end\n$timescale\n\t1s\n$end\n$scope module tb_top0 $end\n$var wire 1 ! zero $end\n$var reg 1 \" flip $end\n$scope module dut $end\n$var wire 1 \" flip $end\n$var wire 1 ! zero $end\n$var wire 1 # one $end\n$upscope $end\n$upscope $end\n$enddefinitions $end\n#0\n$dumpvars\n1#\n0\"\n0!\n$end\n#11\n1!\n0#\n1\"\n#12\n"
+            "dump": {
+                "config": {
+                    "hscale": 1
+                },
+                "signal": [
+                    {
+                        "data": [],
+                        "name": "tb_top0.zero",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.flip",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.dut.one",
+                        "wave": "10"
+                    }
+                ]
+            }
         },
         "1ed8b3c6-d683-4081-b369-512efe2eb575": {
             "message": "Erro do teste cout: esperado x obtido y! (0)",
-            "dump": "$date\n\tSun May 18 20:23:55 2025\n$end\n$version\n\tIcarus Verilog\n$end\n$timescale\n\t1s\n$end\n$scope module tb_top0 $end\n$var wire 1 ! zero $end\n$var reg 1 \" flip $end\n$scope module dut $end\n$var wire 1 \" flip $end\n$var wire 1 ! zero $end\n$var wire 1 # one $end\n$upscope $end\n$upscope $end\n$enddefinitions $end\n#0\n$dumpvars\n1#\n0\"\n0!\n$end\n#11\n1!\n0#\n1\"\n#12\n"
+            "dump": {
+                "config": {
+                    "hscale": 1
+                },
+                "signal": [
+                    {
+                        "data": [],
+                        "name": "tb_top0.zero",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.flip",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.dut.one",
+                        "wave": "10"
+                    }
+                ]
+            }
         }
     }
 },
@@ -161,11 +245,53 @@ Envia e salva a resposta de um usuário a uma questão de Verilog. Recebe o reto
     "feedback": {
         "1ed8b3c6-d683-4081-b369-512efe2eb573": {
             "message": "Sucesso do teste sum! (50)",
-            "dump": "$date\n\tSun May 18 20:23:55 2025\n$end\n$version\n\tIcarus Verilog\n$end\n$timescale\n\t1s\n$end\n$scope module tb_top0 $end\n$var wire 1 ! zero $end\n$var reg 1 \" flip $end\n$scope module dut $end\n$var wire 1 \" flip $end\n$var wire 1 ! zero $end\n$var wire 1 # one $end\n$upscope $end\n$upscope $end\n$enddefinitions $end\n#0\n$dumpvars\n1#\n0\"\n0!\n$end\n#11\n1!\n0#\n1\"\n#12\n"
+            "dump": {
+                "config": {
+                    "hscale": 1
+                },
+                "signal": [
+                    {
+                        "data": [],
+                        "name": "tb_top0.zero",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.flip",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.dut.one",
+                        "wave": "10"
+                    }
+                ]
+            }
         },
         "1ed8b3c6-d683-4081-b369-512efe2eb575": {
             "message": "Sucesso do teste cout! (50)",
-            "dump": "$date\n\tSun May 18 20:23:55 2025\n$end\n$version\n\tIcarus Verilog\n$end\n$timescale\n\t1s\n$end\n$scope module tb_top0 $end\n$var wire 1 ! zero $end\n$var reg 1 \" flip $end\n$scope module dut $end\n$var wire 1 \" flip $end\n$var wire 1 ! zero $end\n$var wire 1 # one $end\n$upscope $end\n$upscope $end\n$enddefinitions $end\n#0\n$dumpvars\n1#\n0\"\n0!\n$end\n#11\n1!\n0#\n1\"\n#12\n"
+            "dump": {
+                "config": {
+                    "hscale": 1
+                },
+                "signal": [
+                    {
+                        "data": [],
+                        "name": "tb_top0.zero",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.flip",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.dut.one",
+                        "wave": "10"
+                    }
+                ]
+            }
         }
     }
 },
