@@ -151,173 +151,173 @@ Envia e salva as respostas de um usuário em um quiz. Responde uma lista com os 
     },
     {   // Código compila, não passa em nenhum teste
         "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
-        "score": "0"
-        "result": "wrong" // "right" | "wrong" | "partial"
+        "score": "0",
+        "result": "wrong", // "right" | "wrong" | "partial"
         "feedback": {
             "1ed8b3c6-d683-4081-b369-512efe2eb573": {
-            "message": "Erro do teste sum: esperado x obtido y! (50)",
+                "message": "Erro do teste sum: esperado x obtido y! (50)",
+                    "dump": {
+                    "config": {
+                        "hscale": 1
+                    },
+                    "signal": [
+                        {
+                            "data": [],
+                            "name": "tb_top0.zero",
+                            "wave": "01"
+                        },
+                        {
+                            "data": [],
+                            "name": "tb_top0.flip",
+                            "wave": "01"
+                        },
+                        {
+                            "data": [],
+                            "name": "tb_top0.dut.one",
+                            "wave": "10"
+                        }
+                    ]
+                }
+            },
+            "1ed8b3c6-d683-4081-b369-512efe2eb575": {
+                "message": "Erro do teste cout: esperado x obtido y! (0)",
                 "dump": {
-                "config": {
-                    "hscale": 1
-                },
-                "signal": [
-                    {
-                        "data": [],
-                        "name": "tb_top0.zero",
-                        "wave": "01"
+                    "config": {
+                        "hscale": 1
                     },
-                    {
-                        "data": [],
-                        "name": "tb_top0.flip",
-                        "wave": "01"
-                    },
-                    {
-                        "data": [],
-                        "name": "tb_top0.dut.one",
-                        "wave": "10"
-                    }
-                ]
+                    "signal": [
+                        {
+                            "data": [],
+                            "name": "tb_top0.zero",
+                            "wave": "01"
+                        },
+                        {
+                            "data": [],
+                            "name": "tb_top0.flip",
+                            "wave": "01"
+                        },
+                        {
+                            "data": [],
+                            "name": "tb_top0.dut.one",
+                            "wave": "10"
+                        }
+                    ]
+                }
             }
-        },
-        "1ed8b3c6-d683-4081-b369-512efe2eb575": {
-            "message": "Erro do teste cout: esperado x obtido y! (0)",
-            "dump": "{
-                "config": {
-                    "hscale": 1
-                },
-                "signal": [
-                    {
-                        "data": [],
-                        "name": "tb_top0.zero",
-                        "wave": "01"
-                    },
-                    {
-                        "data": [],
-                        "name": "tb_top0.flip",
-                        "wave": "01"
-                    },
-                    {
-                        "data": [],
-                        "name": "tb_top0.dut.one",
-                        "wave": "10"
-                    }
-                ]
-            }
-        }
         }
     },
     {   // Código compila, passa em apenas um teste
         "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
-        "score": "50"
-        "result": "partial" // "right" | "wrong" | "partial"
+        "score": "50",
+        "result": "partial", // "right" | "wrong" | "partial"
         "feedback": {
             "1ed8b3c6-d683-4081-b369-512efe2eb573": {
-            "message": "Sucesso do teste sum! (50)",
+                "message": "Sucesso do teste sum! (50)",
                 "dump": {
-                "config": {
-                    "hscale": 1
-                },
-                "signal": [
-                    {
-                        "data": [],
-                        "name": "tb_top0.zero",
-                        "wave": "01"
+                    "config": {
+                        "hscale": 1
                     },
-                    {
-                        "data": [],
-                        "name": "tb_top0.flip",
-                        "wave": "01"
+                    "signal": [
+                        {
+                            "data": [],
+                            "name": "tb_top0.zero",
+                            "wave": "01"
+                        },
+                        {
+                            "data": [],
+                            "name": "tb_top0.flip",
+                            "wave": "01"
+                        },
+                        {
+                            "data": [],
+                            "name": "tb_top0.dut.one",
+                            "wave": "10"
+                        }
+                    ]
+                }
+            },
+            "1ed8b3c6-d683-4081-b369-512efe2eb575": {
+                "message": "Erro do teste cout: esperado x obtido y! (0)",
+                "dump": {
+                    "config": {
+                        "hscale": 1
                     },
-                    {
-                        "data": [],
-                        "name": "tb_top0.dut.one",
-                        "wave": "10"
-                    }
-                ]
+                    "signal": [
+                        {
+                            "data": [],
+                            "name": "tb_top0.zero",
+                            "wave": "01"
+                        },
+                        {
+                            "data": [],
+                            "name": "tb_top0.flip",
+                            "wave": "01"
+                        },
+                        {
+                            "data": [],
+                            "name": "tb_top0.dut.one",
+                            "wave": "10"
+                        }
+                    ]
+                }
             }
-        },
-        "1ed8b3c6-d683-4081-b369-512efe2eb575": {
-            "message": "Erro do teste cout: esperado x obtido y! (0)",
-            "dump": {
-                "config": {
-                    "hscale": 1
-                },
-                "signal": [
-                    {
-                        "data": [],
-                        "name": "tb_top0.zero",
-                        "wave": "01"
-                    },
-                    {
-                        "data": [],
-                        "name": "tb_top0.flip",
-                        "wave": "01"
-                    },
-                    {
-                        "data": [],
-                        "name": "tb_top0.dut.one",
-                        "wave": "10"
-                    }
-                ]
-            }
-        }
         }
     },
     {   // Código compila, passa em todos os testes
         "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
-        "score": "100"
-        "result": "right" // "right" | "wrong" | "partial"
+        "score": "100",
+        "result": "right", // "right" | "wrong" | "partial"
         "feedback": {
             "1ed8b3c6-d683-4081-b369-512efe2eb573": {
-            "message": "Sucesso do teste sum! (50)",
+                "message": "Sucesso do teste sum! (50)",
                 "dump": {
-                "config": {
-                    "hscale": 1
-                },
-                "signal": [
-                    {
-                        "data": [],
-                        "name": "tb_top0.zero",
-                        "wave": "01"
+                    "config": {
+                        "hscale": 1
                     },
-                    {
-                        "data": [],
-                        "name": "tb_top0.flip",
-                        "wave": "01"
+                    "signal": [
+                        {
+                            "data": [],
+                            "name": "tb_top0.zero",
+                            "wave": "01"
+                        },
+                        {
+                            "data": [],
+                            "name": "tb_top0.flip",
+                            "wave": "01"
+                        },
+                        {
+                            "data": [],
+                            "name": "tb_top0.dut.one",
+                            "wave": "10"
+                        }
+                    ]
+                }
+            },
+            "1ed8b3c6-d683-4081-b369-512efe2eb575": {
+                "message": "Sucesso do teste cout! (50)",
+                "dump": {
+                    "config": {
+                        "hscale": 1
                     },
-                    {
-                        "data": [],
-                        "name": "tb_top0.dut.one",
-                        "wave": "10"
-                    }
-                ]
+                    "signal": [
+                        {
+                            "data": [],
+                            "name": "tb_top0.zero",
+                            "wave": "01"
+                        },
+                        {
+                            "data": [],
+                            "name": "tb_top0.flip",
+                            "wave": "01"
+                        },
+                        {
+                            "data": [],
+                            "name": "tb_top0.dut.one",
+                            "wave": "10"
+                        }
+                    ]
+                }
             }
-        },
-        "1ed8b3c6-d683-4081-b369-512efe2eb575": {
-            "message": "Sucesso do teste cout! (50)",
-            "dump": {
-                "config": {
-                    "hscale": 1
-                },
-                "signal": [
-                    {
-                        "data": [],
-                        "name": "tb_top0.zero",
-                        "wave": "01"
-                    },
-                    {
-                        "data": [],
-                        "name": "tb_top0.flip",
-                        "wave": "01"
-                    },
-                    {
-                        "data": [],
-                        "name": "tb_top0.dut.one",
-                        "wave": "10"
-                    }
-                ]
-            }
-        }
         }
     },
 ] Response Code 200
