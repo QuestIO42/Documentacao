@@ -143,7 +143,10 @@ Envia e salva as respostas de um usuário em um quiz. Responde uma lista com os 
         "score": "0"
         "result": "wrong" // "right" | "wrong" | "partial"
         "feedback": {
-            "1ed8b3c6-d683-4081-b369-512efe2eb573": "Erro de sintaxe: linha 10: endmodula"
+            "1ed8b3c6-d683-4081-b369-512efe2eb573": {
+            "message": "Erro no teste sum: Erro de compilação em module top\n (input flip, output zero, one);\n assign zero = flip ? 1'b1 : 1'b0;\n assign one = flip ? 1'b0 : 1'b1;\n  endmodule\n ",
+            "error": "/tmp/tmp3jqe90x3/tmponn0nngb.v:10: syntax error\n/tmp/tmp3jqe90x3/tmponn0nngb.v:10: error: malformed statement"
+        }
         }
     },
     {   // Código compila, não passa em nenhum teste
@@ -151,8 +154,56 @@ Envia e salva as respostas de um usuário em um quiz. Responde uma lista com os 
         "score": "0"
         "result": "wrong" // "right" | "wrong" | "partial"
         "feedback": {
-            "1ed8b3c6-d683-4081-b369-512efe2eb573": "Erro do teste sum: esperado x obtido y! (50)",
-            "1ed8b3c6-d683-4081-b369-512efe2eb575": "Erro do teste cout: esperado x obtido y! (0)"
+            "1ed8b3c6-d683-4081-b369-512efe2eb573": {
+            "message": "Erro do teste sum: esperado x obtido y! (50)",
+                "dump": {
+                "config": {
+                    "hscale": 1
+                },
+                "signal": [
+                    {
+                        "data": [],
+                        "name": "tb_top0.zero",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.flip",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.dut.one",
+                        "wave": "10"
+                    }
+                ]
+            }
+        },
+        "1ed8b3c6-d683-4081-b369-512efe2eb575": {
+            "message": "Erro do teste cout: esperado x obtido y! (0)",
+            "dump": "{
+                "config": {
+                    "hscale": 1
+                },
+                "signal": [
+                    {
+                        "data": [],
+                        "name": "tb_top0.zero",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.flip",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.dut.one",
+                        "wave": "10"
+                    }
+                ]
+            }
+        }
         }
     },
     {   // Código compila, passa em apenas um teste
@@ -160,8 +211,56 @@ Envia e salva as respostas de um usuário em um quiz. Responde uma lista com os 
         "score": "50"
         "result": "partial" // "right" | "wrong" | "partial"
         "feedback": {
-            "1ed8b3c6-d683-4081-b369-512efe2eb573": "Sucesso do teste sum! (50)",
-            "1ed8b3c6-d683-4081-b369-512efe2eb575": "Erro do teste cout: esperado x obtido y! (0)"
+            "1ed8b3c6-d683-4081-b369-512efe2eb573": {
+            "message": "Sucesso do teste sum! (50)",
+                "dump": {
+                "config": {
+                    "hscale": 1
+                },
+                "signal": [
+                    {
+                        "data": [],
+                        "name": "tb_top0.zero",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.flip",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.dut.one",
+                        "wave": "10"
+                    }
+                ]
+            }
+        },
+        "1ed8b3c6-d683-4081-b369-512efe2eb575": {
+            "message": "Erro do teste cout: esperado x obtido y! (0)",
+            "dump": {
+                "config": {
+                    "hscale": 1
+                },
+                "signal": [
+                    {
+                        "data": [],
+                        "name": "tb_top0.zero",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.flip",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.dut.one",
+                        "wave": "10"
+                    }
+                ]
+            }
+        }
         }
     },
     {   // Código compila, passa em todos os testes
@@ -169,8 +268,56 @@ Envia e salva as respostas de um usuário em um quiz. Responde uma lista com os 
         "score": "100"
         "result": "right" // "right" | "wrong" | "partial"
         "feedback": {
-            "1ed8b3c6-d683-4081-b369-512efe2eb573": "Sucesso do teste sum! (50)",
-            "1ed8b3c6-d683-4081-b369-512efe2eb575": "Sucesso do teste cout! (50)"
+            "1ed8b3c6-d683-4081-b369-512efe2eb573": {
+            "message": "Sucesso do teste sum! (50)",
+                "dump": {
+                "config": {
+                    "hscale": 1
+                },
+                "signal": [
+                    {
+                        "data": [],
+                        "name": "tb_top0.zero",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.flip",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.dut.one",
+                        "wave": "10"
+                    }
+                ]
+            }
+        },
+        "1ed8b3c6-d683-4081-b369-512efe2eb575": {
+            "message": "Sucesso do teste cout! (50)",
+            "dump": {
+                "config": {
+                    "hscale": 1
+                },
+                "signal": [
+                    {
+                        "data": [],
+                        "name": "tb_top0.zero",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.flip",
+                        "wave": "01"
+                    },
+                    {
+                        "data": [],
+                        "name": "tb_top0.dut.one",
+                        "wave": "10"
+                    }
+                ]
+            }
+        }
         }
     },
 ] Response Code 200
