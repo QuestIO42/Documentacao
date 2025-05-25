@@ -1,133 +1,182 @@
 # API Respostas dos usuários
 
+# Criar Questionario
     [POST] /userquizquestionanswer    
 
-Envia e salva a resposta de um usuário a uma questão aberta. Recebe o retorno para exibição assíncrona ao usuário.
-
+Cria as questoes de um questionario para um usuário.
+Se houver um questionario não enviado, respondera com um erro dizendo a tentativa atual aberta.
 ```json
 // request
 {
-    "id_user": "1ed8b3c6-d683-4081-b369-512efe2eb573",
-    "id_quiz": "2ed8b3c6-d683-4081-b369-512efe2eb573",
-    "id_question": "3ed8b3c6-d683-4081-b369-512efe2eb573",
-    "id_answer": "", // empty or omit 
-    "text_answer": "Pedro Álvares Cabral",
+    "id_user": "321372b4-8631-4fef-9fc0-c961952239f1",
+    "id_quiz": "7ab20845-69ee-45ae-a768-3339890f6a9b",
 }
-// response
-{
-    "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
-    "score": "100"
-    "result": "right" // "right" | "wrong" | "partial"
-    "feedback": "Well done!" // this is optional 
-},
+
+// responses
+[   //cria as perguntas do questionario
+    {
+        "id": "7617ee90-3def-46bc-99a5-745778fe38f2",
+        "id_user": "321372b4-8631-4fef-9fc0-c961952239f1",
+        "id_quiz": "7ab20845-69ee-45ae-a768-3339890f6a9b",
+        "id_question": "7a7796c0-978b-4871-805a-1d9e622bbc23",
+        "current_try": 1
+    },
+    {
+        "id": "e8c2db85-a2e4-4e08-bf71-8563736b3640",
+        "id_user": "321372b4-8631-4fef-9fc0-c961952239f1",
+        "id_quiz": "7ab20845-69ee-45ae-a768-3339890f6a9b",
+        "id_question": "5650afed-f0b3-4ff8-a774-392f72e6e6e5",
+        "current_try": 1
+    }, 
+    ...
+] Response Code 201
+--------------------------------------------------------------------
+{   //quando o usuario ja tem um questionario aberto
+    "feedback": "O usuário ainda está com o quiz em andamento",
+    "current_try": 1
+} Response Code 400
 ```
-Envia e salva a resposta de um usuário a uma questão de múltipa escolha. Recebe o retorno para exibição assíncrona ao usuário.
+# Get Questionario
+    [GET] /userquizquestionanswer/quiz/{id_quiz}
 
+Retorna os objetos de resposta do questionario do usuario em uma tentativa.
 ```json
 // request
 {
-    "id_user": "4ed8b3c6-d683-4081-b369-512efe2eb573",
-    "id_quiz": "5ed8b3c6-d683-4081-b369-512efe2eb573",
-    "id_question": "6ed8b3c6-d683-4081-b369-512efe2eb573",
-    "id_answer": "7ed8b3c6-d683-4081-b369-512efe2eb573",  
-    "text_answer": "", // empty or omit 
+    "id_user": "321372b4-8631-4fef-9fc0-c961952239f1",
+    "current_try": 1
 }
 // response
-{
-    "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
-    "score": "100"
-    "result": "right" // "right" | "wrong" | "partial"
-},
-```
-Envia e salva a resposta de um usuário a uma questão de Verilog. Recebe o retorno para exibição assíncrona ao usuário.
-
-### Erro de sintaxe
-
-```json
-// request
-{
-    "id_user": "4ed8b3c6-d683-4081-b369-512efe2eb573",
-    "id_quiz": "5ed8b3c6-d683-4081-b369-512efe2eb573",
-    "id_question": "6ed8b3c6-d683-4081-b369-512efe2eb573",
-    "id_answer": "", // empty or omit 
-    "text_answer": "module top()\n endmodula;", 
-}
-// response
-{
-    "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
-    "score": "0"
-    "result": "wrong" // "right" | "wrong" | "partial"
-    "feedback": {
-        "1ed8b3c6-d683-4081-b369-512efe2eb573": "Erro de sintaxe: linha 10: endmodula"
-    }
-},
-```
-
-### Código compila, não passa em nenhum teste
-
-```json
-// request
-{
-    "id_user": "4ed8b3c6-d683-4081-b369-512efe2eb573",
-    "id_quiz": "5ed8b3c6-d683-4081-b369-512efe2eb573",
-    "id_question": "6ed8b3c6-d683-4081-b369-512efe2eb573",
-    "id_answer": "", // empty or omit 
-    "text_answer": "module top()\n endmodule;", 
-}
-// response
-{
-    "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
-    "score": "0"
-    "result": "wrong" // "right" | "wrong" | "partial"
-    "feedback": {
-        "1ed8b3c6-d683-4081-b369-512efe2eb573": "Erro do teste sum: esperado x obtido y! (50)",
-        "1ed8b3c6-d683-4081-b369-512efe2eb575": "Erro do teste cout: esperado x obtido y! (0)"
-    }},
+[
+    {
+        "id": "30bbec4d-b8c3-4ace-b4c6-b1f15a1898ac",
+        "text_answer": null,
+        "entry_date": "2025-05-25T15:27:51.247976-03:00",
+        "score": 0,
+        "current_try": 1,
+        "delivered": false,
+        "id_user": "321372b4-8631-4fef-9fc0-c961952239f1",
+        "id_quiz": "7ab20845-69ee-45ae-a768-3339890f6a9b",
+        "id_question": "7a7796c0-978b-4871-805a-1d9e622bbc23",
+        "id_answer": null
+    },
+    ...
+] Response Code 200
 ```
 
-### Código compila, passa em apenas um teste
+# Responder Questão
 
-```json
-// request
+    [PUT] /userquizquestionanswer/<uuid:pk>
+
+Altera o objeto de resposta do questionario do usuario. Deve ser usado para alterar as respostas de uma questão. Os campos são opcionais.
+
+Essa rota não corrige as respostas, apenas altera o objeto de resposta. Para corrigir as respostas, use a rota de enviar questionario.
+```json 
 {
-    "id_user": "4ed8b3c6-d683-4081-b369-512efe2eb573",
-    "id_quiz": "5ed8b3c6-d683-4081-b369-512efe2eb573",
-    "id_question": "6ed8b3c6-d683-4081-b369-512efe2eb573",
-    "id_answer": "", // empty or omit 
-    "text_answer": "module top(input x, y, cin, output sum)\n assign sum = x ^ y ^ cin;\n endmodule;", 
+    "text_answer": "Resposta do usuario", // resposta discursiva e de verilog
+    "id_answer": "7a7796c0-978b-4871-805a-1d9e622bbc23" // resposta multipla escolha
 }
 // response
 {
-    "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
-    "score": "50"
-    "result": "partial" // "right" | "wrong" | "partial"
-    "feedback": {
-        "1ed8b3c6-d683-4081-b369-512efe2eb573": "Sucesso do teste sum! (50)",
-        "1ed8b3c6-d683-4081-b369-512efe2eb575": "Erro do teste cout: esperado x obtido y! (0)"
-    }
-},
+    "id": "b9474673-55ef-4ef1-b9a4-719143bff3d4",
+    "text_answer": "Resposta do usuario",
+    "entry_date": "2025-05-25T15:27:51.249805-03:00",
+    "score": 0,
+    "current_try": 1,
+    "delivered": false,
+    "id_user": "321372b4-8631-4fef-9fc0-c961952239f1",
+    "id_quiz": "7ab20845-69ee-45ae-a768-3339890f6a9b",
+    "id_question": "5650afed-f0b3-4ff8-a774-392f72e6e6e5",
+    "id_answer": "7a7796c0-978b-4871-805a-1d9e622bbc23"
+} Response Code 200
 ```
 
-### Código compila, passa em todos os testes
+# Enviar Questionario
+
+    [POST] /userquizquestionanswer/send   
+Envia e salva as respostas de um usuário em um quiz. Responde uma lista com os resultados de cada questão. Retorna um erro caso o usuário não tenha um quiz aberto.
 
 ```json
 // request
 {
-    "id_user": "4ed8b3c6-d683-4081-b369-512efe2eb573",
-    "id_quiz": "5ed8b3c6-d683-4081-b369-512efe2eb573",
-    "id_question": "6ed8b3c6-d683-4081-b369-512efe2eb573",
-    "id_answer": "", // empty or omit 
-    "text_answer": "module top(input x, y, cin, output sum, cout)\n assign sum = x ^ y ^ cin;\n assign cout = x&y|x&cin|y&cin;\n endmodule;", 
+    "id_user": "321372b4-8631-4fef-9fc0-c961952239f1",
+    "id_quiz": "7ab20845-69ee-45ae-a768-3339890f6a9b",
 }
 // response
-{
-    "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
-    "score": "100"
-    "result": "right" // "right" | "wrong" | "partial"
-    "feedback": {
-        "1ed8b3c6-d683-4081-b369-512efe2eb573": "Sucesso do teste sum! (50)",
-        "1ed8b3c6-d683-4081-b369-512efe2eb575": "Sucesso do teste cout! (50)"
-    }
-},
+
+[
+    // resposta discursivas
+    {   // correta
+        "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
+        "score": "100",
+        "result": "right", // "right" | "wrong" | "partial"
+        "feedback": "Well done!" // this is optional 
+    },
+    {   // não corrigida automaticamente
+        "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
+        "score": "0",
+        "result": "partial", // "right" | "wrong" | "partial"
+        "feedback": "Necessário verificação do professor!"
+    },
+
+    // respostas multipla escolha
+    {   // correta
+        "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
+        "score": "100",
+        "result": "right" // "right" | "wrong" | "partial"
+    },
+    {   // errada
+        "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
+        "score": "0",
+        "result": "wrong" // "right" | "wrong" | "partial"
+    },
+    {   // sem resposta
+        "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
+        "score": 0,
+        "result": "wrong",
+        "feedback": "ID da resposta inválido"
+    },
+
+    // respostas de verilog
+    {   // erro de sintaxe
+        "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
+        "score": "0"
+        "result": "wrong" // "right" | "wrong" | "partial"
+        "feedback": {
+            "1ed8b3c6-d683-4081-b369-512efe2eb573": "Erro de sintaxe: linha 10: endmodula"
+        }
+    },
+    {   // Código compila, não passa em nenhum teste
+        "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
+        "score": "0"
+        "result": "wrong" // "right" | "wrong" | "partial"
+        "feedback": {
+            "1ed8b3c6-d683-4081-b369-512efe2eb573": "Erro do teste sum: esperado x obtido y! (50)",
+            "1ed8b3c6-d683-4081-b369-512efe2eb575": "Erro do teste cout: esperado x obtido y! (0)"
+        }
+    },
+    {   // Código compila, passa em apenas um teste
+        "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
+        "score": "50"
+        "result": "partial" // "right" | "wrong" | "partial"
+        "feedback": {
+            "1ed8b3c6-d683-4081-b369-512efe2eb573": "Sucesso do teste sum! (50)",
+            "1ed8b3c6-d683-4081-b369-512efe2eb575": "Erro do teste cout: esperado x obtido y! (0)"
+        }
+    },
+    {   // Código compila, passa em todos os testes
+        "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
+        "score": "100"
+        "result": "right" // "right" | "wrong" | "partial"
+        "feedback": {
+            "1ed8b3c6-d683-4081-b369-512efe2eb573": "Sucesso do teste sum! (50)",
+            "1ed8b3c6-d683-4081-b369-512efe2eb575": "Sucesso do teste cout! (50)"
+        }
+    },
+] Response Code 200
+-----------------------------------------------------------------------------------------------
+{   // Quando o usuario não tem um quiz aberto
+    "feedback": "Usuario não tem nenhuma tentativa aberta"
+} Response Code 400
 ```
 

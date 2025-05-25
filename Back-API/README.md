@@ -112,7 +112,7 @@ Lista de **rotas não protegidas**:
         [POST] /answer       // cadastrar uma resposta
          [PUT] /answer/{id}  // atualizar uma resposta
       [DELETE] /answer/{id}  // remover uma resposta especifica
-
+        
          [GET] /answer/question/{idQuestion}  // ver as respostas de uma questão
 
 - [**UserQuizQuestionAnswer:**](./UserQuizQuestionAnswer.md)  
@@ -121,7 +121,7 @@ Lista de **rotas não protegidas**:
         [POST] /userquizquestionanswer           // enviar a resposta de um usuario para uma questão
          [PUT] /userquizquestionanswer/{id}      // atualizar uma resposta especifica de algum usuario em alguma questão pelo id
       [DELETE] /userquizquestionanswer/{id}      // remover uma resposta especifica de algum usuario em alguma questão pelo id
-
+        [POST] /userquizquestionanswer/send      // envia e salva as respostas de um usuário em um quiz
          [GET] /userquizquestionanswer/quiz/{idQuiz}                          // ver respostas de um usuário em um questionário
          [GET] /userquizquestionanswer/quizquestion/{idQuiz}/{idQuestion}     // ver resposta de um usuário em uma questão de um questionário
 
