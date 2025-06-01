@@ -122,6 +122,7 @@ Lista de **rotas não protegidas**:
          [PUT] /userquizquestionanswer/{id}      // atualizar uma resposta especifica de algum usuario em alguma questão pelo id
       [DELETE] /userquizquestionanswer/{id}      // remover uma resposta especifica de algum usuario em alguma questão pelo id
         [POST] /userquizquestionanswer/send      // envia e salva as respostas de um usuário em um quiz
+        [POST] /userquizquestionanswer/check     // checa resposta verilog de uma questão
          [GET] /userquizquestionanswer/quiz/{idQuiz}                          // ver respostas de um usuário em um questionário
          [GET] /userquizquestionanswer/quizquestion/{idQuiz}/{idQuestion}     // ver resposta de um usuário em uma questão de um questionário
 
