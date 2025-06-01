@@ -327,3 +327,89 @@ Envia e salva as respostas de um usuário em um quiz. Responde uma lista com os 
 } Response Code 400
 ```
 
+# Checar questão de verilog
+
+    [POST] /userquizquestionanswer/check   
+Faz a verificação de uma questão verilog
+
+```json
+// request
+{
+    "id_question": "8a5940ea-3ac4-4f3f-80dd-6fbe6cc17005",
+    "text_answer": "module top (\n    input flip,\n    output zero, one\n);\n    // Pro mode stuff\n assign zero = flip;\n    assign one = ~flip;\nendmodule"
+}
+
+// response
+[
+    {
+        "score": 100,
+        "result": "right",
+        "feedback": {
+            "da35d64d-1773-4685-8c95-aea173c2f36b": {
+                "message": "Sucesso no teste TB0! (50)",
+                "dump": {
+                    "config": {
+                        "hscale": 1
+                    },
+                    "signal": [
+                        {
+                            "data": [],
+                            "name": "tb_top0.zero",
+                            "wave": "01"
+                        },
+                        {
+                            "data": [],
+                            "name": "tb_top0.flip",
+                            "wave": "01"
+                        },
+                        {
+                            "data": [],
+                            "name": "tb_top0.dut.one",
+                            "wave": "10"
+                        }
+                    ]
+                }
+            },
+            "a2cbc8a0-4f1c-49d9-bf4e-edc4f458b1c4": {
+                "message": "Sucesso no teste TB1! (50)",
+                "dump": {
+                    "config": {
+                        "hscale": 1
+                    },
+                    "signal": [
+                        {
+                            "data": [],
+                            "name": "tb_top1.one",
+                            "wave": "10"
+                        },
+                        {
+                            "data": [],
+                            "name": "tb_top1.flip",
+                            "wave": "01"
+                        },
+                        {
+                            "data": [],
+                            "name": "tb_top1.dut.zero",
+                            "wave": "01"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+] Response Code 200
+
+-----------------------------------------------------------------------------------------------
+[    // Caso a requisição não enviar uma informação esperada
+    "id_question": [
+        "This field is required."
+    ]
+] Response Code 400
+
+-----------------------------------------------------------------------------------------------
+[    // Caso a questão enviada não seja uma questão de verilog
+    {
+        'feedback': "A questão não é do tipo Verilog"
+    }
+] Response Code 400
+```
