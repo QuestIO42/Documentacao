@@ -344,19 +344,23 @@ Envia e salva as respostas de um usuário em um quiz. Responde uma lista com os 
 ```
 
 # Checar questão de verilog
+    [POST] /userquizquestionanswer/check
 
-    [POST] /userquizquestionanswer/check   
-Faz a verificação de uma questão verilog
+Faz a verificação de uma questão verilog.
 
+### Request:
 ```json
-// request
 {
     "id_quiz": "1028d586-09e5-4641-af5a-05728a7928e7",
     "id_question": "8a5940ea-3ac4-4f3f-80dd-6fbe6cc17005",
     "text_answer": "module top (\n    input flip,\n    output zero, one\n);\n    // Pro mode stuff\n assign zero = flip;\n    assign one = ~flip;\nendmodule"
 }
+```
 
-// response
+### Responses:
+
+#### Sucesso:
+```json
 [
     {
         "score": 100,
@@ -415,18 +419,24 @@ Faz a verificação de uma questão verilog
         }
     }
 ] Response Code 200
+```
 
------------------------------------------------------------------------------------------------
-[    // Caso a requisição não enviar uma informação esperada
-    "id_question": [
-        "This field is required."
-    ]
-] Response Code 400
-
------------------------------------------------------------------------------------------------
-[    // Caso a questão enviada não seja uma questão de verilog
+#### Erro: Campo obrigatório ausente:
+```json
+[
     {
-        'feedback': "A questão não é do tipo Verilog"
+        "id_question": [
+            "This field is required."
+        ]
+    }
+] Response Code 400
+```
+
+#### Erro: Questão não é do tipo Verilog:
+```json
+[
+    {
+        "feedback": "A questão não é do tipo Verilog"
     }
 ] Response Code 400
 ```
