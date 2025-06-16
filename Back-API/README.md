@@ -51,6 +51,7 @@ Lista de **rotas não protegidas**:
   
          [GET] /course/ranking/{quantidade}  // visualizar ranking de usuarios no curso
          [GET] /course/user/{idUser}         // ver cursos de um usuário  
+         [GET] /course/exportgrade/{idCourse}  // exportar notas de um curso para CSV
 
 - [**UserCourse:**](./UserCourse.md)  
 
@@ -67,7 +68,13 @@ Lista de **rotas não protegidas**:
       [DELETE] /quiz/{id}  // remover um querionario
 
          [GET] /quiz/course/{idCourse}  // ver questionários de um curso   
+         [GET] /quiz/exportgrade/{idQuiz}  // exportar notas de um questionário para CSV
 
+- [**Ranking:**](./Ranking.md)
+
+         [GET] /ranking       // listar ranking dos usuários com mais XP
+         [GET] /ranking/user  // ver ranking do usuário autenticado
+         
 - [**Category:**](./Category.md)  
 
          [GET] /category/{id}  // ver categoria pelo id

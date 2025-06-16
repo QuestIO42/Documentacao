@@ -1,19 +1,22 @@
-# API Respostas dos usuários
+# API Respostas dos Usuários
 
-# Criar Questionario
-    [POST] /userquizquestionanswer    
+## Criar Respostas para um Questionário
+    [POST] /userquizquestionanswer
 
-Cria as questoes de um questionario para um usuário.
-Se houver um questionario não enviado, respondera com um erro dizendo a tentativa atual aberta.
+Cria as respostas de um questionário para um usuário. Se houver um questionário não enviado, retorna um erro indicando a tentativa atual aberta.
+
+### Request:
 ```json
-// request
 {
     "id_user": "321372b4-8631-4fef-9fc0-c961952239f1",
-    "id_quiz": "7ab20845-69ee-45ae-a768-3339890f6a9b",
+    "id_quiz": "7ab20845-69ee-45ae-a768-3339890f6a9b"
 }
+```
 
-// responses
-[   //cria as perguntas do questionario
+### Responses:
+```json
+// Sucesso
+[
     {
         "id": "7617ee90-3def-46bc-99a5-745778fe38f2",
         "id_user": "321372b4-8631-4fef-9fc0-c961952239f1",
@@ -27,26 +30,32 @@ Se houver um questionario não enviado, respondera com um erro dizendo a tentati
         "id_quiz": "7ab20845-69ee-45ae-a768-3339890f6a9b",
         "id_question": "5650afed-f0b3-4ff8-a774-392f72e6e6e5",
         "current_try": 1
-    }, 
+    },
     ...
 ] Response Code 201
---------------------------------------------------------------------
-{   //quando o usuario ja tem um questionario aberto
+
+// Erro: Questionário em andamento
+{
     "feedback": "O usuário ainda está com o quiz em andamento",
     "current_try": 1
 } Response Code 400
 ```
-# Get Questionario
+
+## Obter Respostas de um Questionário
     [GET] /userquizquestionanswer/quiz/{id_quiz}
 
-Retorna os objetos de resposta do questionario do usuario em uma tentativa.
+Retorna os objetos de resposta do questionário do usuário em uma tentativa.
+
+### Request:
 ```json
-// request
 {
     "id_user": "321372b4-8631-4fef-9fc0-c961952239f1",
     "current_try": 1
 }
-// response
+```
+
+### Response:
+```json
 [
     {
         "id": "30bbec4d-b8c3-4ace-b4c6-b1f15a1898ac",
@@ -64,19 +73,23 @@ Retorna os objetos de resposta do questionario do usuario em uma tentativa.
 ] Response Code 200
 ```
 
-# Responder Questão
-
+## Responder Questão
     [PUT] /userquizquestionanswer/<uuid:pk>
 
-Altera o objeto de resposta do questionario do usuario. Deve ser usado para alterar as respostas de uma questão. Os campos são opcionais.
+Altera o objeto de resposta do questionário do usuário. Deve ser usado para alterar as respostas de uma questão. Os campos são opcionais.
 
-Essa rota não corrige as respostas, apenas altera o objeto de resposta. Para corrigir as respostas, use a rota de enviar questionario.
-```json 
+Essa rota não corrige as respostas, apenas altera o objeto de resposta. Para corrigir as respostas, use a rota de enviar questionário.
+
+### Request:
+```json
 {
     "text_answer": "Resposta do usuario", // resposta discursiva e de verilog
     "id_answer": "7a7796c0-978b-4871-805a-1d9e622bbc23" // resposta multipla escolha
 }
-// response
+```
+
+### Response:
+```json
 {
     "id": "b9474673-55ef-4ef1-b9a4-719143bff3d4",
     "text_answer": "Resposta do usuario",
@@ -91,19 +104,21 @@ Essa rota não corrige as respostas, apenas altera o objeto de resposta. Para co
 } Response Code 200
 ```
 
-# Enviar Questionario
+## Enviar Questionário
+    [POST] /userquizquestionanswer/send
 
-    [POST] /userquizquestionanswer/send   
 Envia e salva as respostas de um usuário em um quiz. Responde uma lista com os resultados de cada questão. Retorna um erro caso o usuário não tenha um quiz aberto.
 
+### Request:
 ```json
-// request
 {
     "id_user": "321372b4-8631-4fef-9fc0-c961952239f1",
-    "id_quiz": "7ab20845-69ee-45ae-a768-3339890f6a9b",
+    "id_quiz": "7ab20845-69ee-45ae-a768-3339890f6a9b"
 }
-// response
+```
 
+### Response:
+```json
 [
     // resposta discursivas
     {   // correta
@@ -319,10 +334,11 @@ Envia e salva as respostas de um usuário em um quiz. Responde uma lista com os 
                 }
             }
         }
-    },
+    }
 ] Response Code 200
------------------------------------------------------------------------------------------------
-{   // Quando o usuario não tem um quiz aberto
+
+// Erro: Nenhuma tentativa aberta
+{
     "feedback": "Usuario não tem nenhuma tentativa aberta"
 } Response Code 400
 ```
