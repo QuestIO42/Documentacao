@@ -19,7 +19,7 @@ Retorna todos os questionários de um curso.
     },
 ]
 ```
-
+---
          [GET] /quiz/{id}    
 
 Retorna o questionario com esse id e suas questões.
@@ -48,7 +48,7 @@ Retorna o questionario com esse id e suas questões.
 }
 
 ```
-
+---
          [PUT] /quiz/{id}    
 
 Atualiza dados de quiz, não é obrigatório a presença de todos os campos. Somente administradores e professores tem permissão pra isso
@@ -80,7 +80,7 @@ Atualiza dados de quiz, não é obrigatório a presença de todos os campos. Som
 }
 
 ```
-
+---
          [DELETE] /quiz/{id}     
 
 Deleta o questionario com o id. Somente administradores e professores tem permissão pra isso
@@ -92,7 +92,7 @@ Deleta o questionario com o id. Somente administradores e professores tem permis
 {}
 
 ```
-
+---
          [POST] /quiz   
 
 Adiciona um questionario
@@ -106,4 +106,19 @@ Adiciona um questionario
 // response
 {}
 
+```
+---
+         [GET] /quiz/remainingtries/{id} // Verifica tentativas restantes
+
+Retorna tentativas restantes de um questionário
+
+```
+// request
+{}
+// response
+{
+         "try": 2,
+         "max_tries": 6,
+         "remaining_tries": 4
+}
 ```
