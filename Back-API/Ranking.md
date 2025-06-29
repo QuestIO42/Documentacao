@@ -1,63 +1,46 @@
 # API Ranking
 
-### Visualizar ranking do site
-    [GET] /ranking  
+## Visualizar ranking geral
+    [GET] /ranking
 
-Retorna os 10 usuários cadastrados com maior XP.
+Retorna os usuários cadastrados com maior XP.
 
+### Request:
 ```json
-// request
 {}
-// response
+```
+
+### Response:
+```json
 [
     {
-        "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
-        "username": "123456", // RA do aluno
         "full_name": "Fulano de tal",
-        "email": "fulano@estudante.ufscar.br",
-        "last_login": "2023-11-17T23:38:00Z",
-        "user_role": "STUDENT", // STUDENT, MENTOR, TEACHER, ADMIN
-        "xp_main": "0",
+        "total_xp": 1000
     },
     {
-        "id": "4a870aca-072c-4fbc-9f5d-20490f8fe19c",
-        "username": "567890", // RA do aluno
         "full_name": "Beltrano de tal",
-        "email": "beltrano@estudante.ufscar.br",
-        "last_login": "2023-11-17T23:38:00Z",
-        "user_role": "MENTOR",
-        "xp_main": "0",
-    },
+        "total_xp": 800
+    }
 ]
 ```
 
-### Visualizar ranking do curso
-    [GET] /ranking/{course}  
+## Visualizar ranking do usuário autenticado
+    [GET] /ranking/user
 
-Retorna todos os usuários cadastrados no curso e sua pontuação dentro deste.
+Retorna a posição e os detalhes do ranking do usuário autenticado.
 
+### Request:
 ```json
-// request
 {}
-// response
-[
-    {
-        "id": "1ed8b3c6-d683-4081-b369-512efe2eb573",
-        "username": "123456", // RA do aluno
+```
+
+### Response:
+```json
+{
+    "user_ranking": {
         "full_name": "Fulano de tal",
-        "email": "fulano@estudante.ufscar.br",
-        "last_login": "2023-11-17T23:38:00Z",
-        "user_role": "STUDENT", // STUDENT, MENTOR, TEACHER, ADMIN
-        "xp_course": "0",
+        "total_xp": 1000
     },
-    {
-        "id": "4a870aca-072c-4fbc-9f5d-20490f8fe19c",
-        "username": "567890", // RA do aluno
-        "full_name": "Beltrano de tal",
-        "email": "beltrano@estudante.ufscar.br",
-        "last_login": "2023-11-17T23:38:00Z",
-        "user_role": "MENTOR",
-        "xp_course": "0",
-    },
-]
+    "position": 1
+}
 ```
