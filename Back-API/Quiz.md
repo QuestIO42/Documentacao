@@ -119,6 +119,7 @@ Retorna tentativas restantes de um questionário
 {
          "try": 2,
          "max_tries": 6,
-         "remaining_tries": 4
+         "remaining_tries": 4,
+         "is_open": true
 }
 ```
