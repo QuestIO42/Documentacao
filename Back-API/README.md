@@ -66,7 +66,9 @@ Lista de **rotas não protegidas**:
         [POST] /quiz       // cadastrar um questionario
          [PUT] /quiz/{id}  // atualizar um questionario
       [DELETE] /quiz/{id}  // remover um querionario
-        [GET] /quiz/remainingtries/{id} // Verifica tentativas restantes de um questionario
+         [GET] /quiz/remainingtries/{id} // Verifica tentativas restantes de um questionario
+        [POST] /quiz/image/{id}          // Cadastra imagens em um quiz
+         [GET] /quiz/image/{id}          // Recupera imagens salvas no quiz     
 
          [GET] /quiz/course/{idCourse}  // ver questionários de um curso   
          [GET] /quiz/exportgrade/{idQuiz}  // exportar notas de um questionário para CSV
