@@ -44,33 +44,109 @@ Cria as respostas de um questionário para um usuário. Se houver um questionár
 ## Obter Respostas de um Questionário
     [GET] /userquizquestionanswer/quiz/{id_quiz}
 
-Retorna os objetos de resposta do questionário do usuário em uma tentativa.
+Retorna os objetos de resposta do questionário do usuário em uma tentativa ou agrupados por tentativas.
 
 ### Request:
 ```json
 {
     "id_user": "321372b4-8631-4fef-9fc0-c961952239f1",
-    "current_try": 1
+    "current_try": 1, // Opcional: Filtra por tentativa específica
+    "show_score": true // Opcional: Inclui pontuação no retorno com current_try
 }
 ```
 
 ### Response:
+#### Caso com `current_try` e `show_score` habilitados:
+```json
+{
+    "score": 50,
+    "quiz_max_score": 100,
+    "answers": [
+        {
+            "id": "30bbec4d-b8c3-4ace-b4c6-b1f15a1898ac",
+            "text_answer": null,
+            "entry_date": "2025-05-25T15:27:51.247976-03:00",
+            "score": 50,
+            "current_try": 1,
+            "delivered": false,
+            "id_user": "321372b4-8631-4fef-9fc0-c961952239f1",
+            "id_quiz": "7ab20845-69ee-45ae-a768-3339890f6a9b",
+            "id_question": "7a7796c0-978b-4871-805a-1d9e622bbc23",
+            "id_answer": null
+        }
+    ]
+} Response Code 200
+```
+
+#### Caso com `current_try` habilitado, mas sem `show_score`:
+
 ```json
 [
     {
         "id": "30bbec4d-b8c3-4ace-b4c6-b1f15a1898ac",
         "text_answer": null,
         "entry_date": "2025-05-25T15:27:51.247976-03:00",
-        "score": 0,
+        "score": 50,
         "current_try": 1,
         "delivered": false,
         "id_user": "321372b4-8631-4fef-9fc0-c961952239f1",
         "id_quiz": "7ab20845-69ee-45ae-a768-3339890f6a9b",
         "id_question": "7a7796c0-978b-4871-805a-1d9e622bbc23",
         "id_answer": null
-    },
-    ...
+    }
 ] Response Code 200
+```
+
+
+#### Caso sem `current_try`:
+```json
+{
+    "user_max_score": 50,
+    "quiz_max_score": 100,
+    "tries": {
+        "1": {
+            "score": 50,
+            "answers": [
+                {
+                    "id": "30bbec4d-b8c3-4ace-b4c6-b1f15a1898ac",
+                    "text_answer": null,
+                    "entry_date": "2025-05-25T15:27:51.247976-03:00",
+                    "score": 50,
+                    "current_try": 1,
+                    "delivered": false,
+                    "id_user": "321372b4-8631-4fef-9fc0-c961952239f1",
+                    "id_quiz": "7ab20845-69ee-45ae-a768-3339890f6a9b",
+                    "id_question": "7a7796c0-978b-4871-805a-1d9e622bbc23",
+                    "id_answer": null
+                }
+            ]
+        },
+        "2": {
+            "score": 30,
+            "answers": [
+                {
+                    "id": "40bbec4d-b8c3-4ace-b4c6-b1f15a1898ad",
+                    "text_answer": null,
+                    "entry_date": "2025-05-26T15:27:51.247976-03:00",
+                    "score": 30,
+                    "current_try": 2,
+                    "delivered": false,
+                    "id_user": "321372b4-8631-4fef-9fc0-c961952239f1",
+                    "id_quiz": "7ab20845-69ee-45ae-a768-3339890f6a9b",
+                    "id_question": "7a7796c0-978b-4871-805a-1d9e622bbc24",
+                    "id_answer": null
+                }
+            ]
+        }
+    }
+} Response Code 200
+```
+
+#### Erro: Nenhuma tentativa aberta
+```json
+{
+    "feedback": "Usuario não tem nenhuma tentativa aberta"
+} Response Code 400
 ```
 
 ## Responder Questão
