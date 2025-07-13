@@ -5,61 +5,65 @@
     "open": true,
     "quizzes": [
         {
-            "name": "auto questionario",
-            "description": null,
-            "questions": [
-                "question_3",
-                "question_3"
-            ]
-        },
-        {
-            "name": "auto questionario",
-            "description": null,
-            "questions": []
-        },
-        {
-            "name": "auto questionario",
-            "description": null,
-            "questions": [
-                "category_6"
-            ]
-        },
-        {
-            "name": "auto questionario",
-            "description": null,
-            "questions": []
-        },
-        {
-            "name": "auto questionario cat",
+            "name": "questionario categoria",
             "description": "asddsaasd",
+            "max_tries": 0,
             "questions": [
-                "category_6"
+                {
+                    "index": "category_0",
+                    "weight": 1
+                },
+                {
+                    "index": "category_0",
+                    "weight": 1
+                },
+                {
+                    "index": "category_3",
+                    "weight": 1
+                }
             ]
         },
         {
             "name": "Novo quiz",
             "description": null,
+            "max_tries": 0,
             "questions": [
-                "question_1",
-                "question_2",
-                "question_0"
+                {
+                    "index": "question_1",
+                    "weight": 1
+                },
+                {
+                    "index": "question_3",
+                    "weight": 1
+                },
+                {
+                    "index": "question_0",
+                    "weight": 1
+                }
             ]
         },
         {
             "name": "Novo Quiz Misto",
             "description": "quiz com perguntas mistas",
+            "max_tries": 0,
             "questions": [
-                "question_3",
-                "question_0",
-                "question_4",
-                "question_2",
-                "question_11"
+                {
+                    "index": "question_2",
+                    "weight": 1
+                },
+                {
+                    "index": "question_0",
+                    "weight": 1
+                },
+                {
+                    "index": "question_4",
+                    "weight": 1
+                },
+                {
+                    "index": "question_3",
+                    "weight": 1
+                }
             ]
-        },
-        {
-            "name": "auto questionario",
-            "description": null,
-            "questions": []
         }
     ],
     "questions": [
@@ -102,11 +106,19 @@
             ]
         },
         {
+            "name": "questão conteúdo 1",
+            "content": "conteúdo teste 1",
+            "type": 0,
+            "responsible": false,
+            "category": "category_1",
+            "answers": []
+        },
+        {
             "name": "brasil",
             "content": "Quem descobriu o Brasil?",
             "type": 2,
             "responsible": true,
-            "category": "category_0",
+            "category": "category_2",
             "answers": [
                 {
                     "name": "Cabral",
@@ -117,132 +129,50 @@
                     "name": "Cabral só",
                     "description": "Cabral",
                     "value": 100
-                },
-                {
-                    "name": "André",
-                    "description": "André",
-                    "value": 100
-                },
-                {
-                    "name": "",
-                    "description": "Lucass",
-                    "value": 100
                 }
             ]
         },
         {
-            "name": "auto questão conteúdo",
-            "content": "conteúdo teste",
-            "type": 0,
-            "responsible": false,
-            "category": "category_1",
-            "answers": []
-        },
-        {
-            "name": "auto questão conteúdo",
-            "content": "conteúdo teste",
+            "name": "questão conteúdo 3",
+            "content": "conteúdo teste 3",
             "type": 0,
             "responsible": false,
             "category": "category_4",
             "answers": []
         },
         {
-            "name": "auto questão conteúdo",
-            "content": "conteúdo teste",
+            "name": "questão conteúdo 2",
+            "content": "conteúdo teste 2",
             "type": 0,
             "responsible": false,
             "category": "category_5",
             "answers": []
-        },
-        {
-            "name": "questao 1",
-            "content": "questão de conteudo",
-            "type": 0,
-            "responsible": false,
-            "category": "category_6",
-            "answers": []
-        },
-        {
-            "name": "questao 2",
-            "content": "questão de multipla escolha",
-            "type": 1,
-            "responsible": true,
-            "category": "category_6",
-            "answers": []
-        },
-        {
-            "name": "questao 3",
-            "content": "questão discursiva",
-            "type": 2,
-            "responsible": true,
-            "category": "category_6",
-            "answers": [
-                {
-                    "name": "asdadssd",
-                    "description": "qeqrqeewrweqrrqwrwe",
-                    "value": 100
-                }
-            ]
-        },
-        {
-            "name": "questao 4",
-            "content": "questão de codigo verilog",
-            "type": 3,
-            "responsible": true,
-            "category": "category_6",
-            "answers": []
-        },
-        {
-            "name": "questao 4",
-            "content": "questão de codigo verilog",
-            "type": 3,
-            "responsible": true,
-            "category": "category_6",
-            "answers": []
-        },
-        {
-            "name": "Verilog - Flip",
-            "content": "Implemente um módulo Verilog chamado **top** que receba um único sinal de entrada:\r\n- flip (1 bit): sinal de controle.\r\n\r\nO módulo deve ter duas saídas:\r\n- zero (1 bit): deve receber diretamente o valor de flip.\r\n- one (1 bit): deve receber o valor invertido de flip (isto é, ~flip)",
-            "type": 3,
-            "responsible": true,
-            "category": "category_6",
-            "answers": [
-                {
-                    "name": "teste 1",
-                    "description": "module tb_top0;\r\n    `include \"assert.v\"\r\n    reg flip;\r\n    wire zero;\r\n    top dut (\r\n        .flip(flip),\r\n        .zero(zero)\r\n    );\r\n    initial begin\r\n        flip = 1'b0; #1\r\n        `assert(zero, 1'b0)\r\n        #10 flip = 1'b1; #1\r\n        `assert(zero, 1'b1)\r\n        $display(\"DONE\");\r\n        $finish;\r\n    end\r\nendmodule",
-                    "value": 100
-                }
-            ]
         }
     ],
     "categories": [
         {
-            "name": "auto categoria",
+            "name": "categoria 1",
             "parent": null
         },
         {
-            "name": "auto categoria",
+            "name": "categoria 1-1",
+            "parent": "category_0"
+        },
+        {
+            "name": "categoria 1-2",
+            "parent": "category_0"
+        },
+        {
+            "name": "categoria 2",
             "parent": null
         },
         {
-            "name": "auto categoria",
-            "parent": null
+            "name": "categoria 2-1",
+            "parent": "category_3"
         },
         {
-            "name": "auto categoria",
-            "parent": null
-        },
-        {
-            "name": "auto categoria",
-            "parent": null
-        },
-        {
-            "name": "auto categoria",
-            "parent": null
-        },
-        {
-            "name": "categoria teste postman",
-            "parent": null
+            "name": "categoria 2-1-1",
+            "parent": "category_4"
         }
     ]
 }
